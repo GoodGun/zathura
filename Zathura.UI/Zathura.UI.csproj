@@ -117,7 +117,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\dist\js\all.js" />
+    <Content Include="Assets\dist\css\zathura.css" />
+    <Content Include="Assets\dist\js\zathura.js" />
     <Content Include="Assets\src\js\main.js" />
     <Content Include="Assets\src\js\jquery.min.js" />
     <Content Include="Global.asax" />
@@ -150,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\dist\css\" />
     <Folder Include="Assets\src\font\" />
     <Folder Include="Models\" />
   </ItemGroup>
