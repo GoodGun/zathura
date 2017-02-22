@@ -15,5 +15,6 @@ namespace Zathura.Data.DataContext
         public DbSet<Content> Contents { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<ContentType> ContentTypes { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

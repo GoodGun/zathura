@@ -159,6 +159,7 @@
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\tickc81e.html" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Global.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\page-bootstrap.js" />
     <Content Include="Scripts\page-calendar.js" />
@@ -170,6 +171,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="CustomFilter\LoginFilter.cs" />
     <Compile Include="Global.asax.cs">
@@ -206,6 +208,7 @@
     <Content Include="Views\Shared\_Sidebar.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="connections.config" />
+    <Content Include="Views\Category\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
