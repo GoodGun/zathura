@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\Enums.cs" />
+    <Compile Include="Helper\Structs.cs" />
     <Compile Include="Infrastructure\IUserRepository.cs" />
     <Compile Include="Infrastructure\IRoleRepository.cs" />
     <Compile Include="Infrastructure\IImageRepository.cs" />

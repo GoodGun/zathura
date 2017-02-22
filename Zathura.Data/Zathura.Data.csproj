@@ -58,7 +58,16 @@
     <Compile Include="Migrations\201702161209173_Create1.Designer.cs">
       <DependentUpon>201702161209173_Create1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702221124506_Create2.cs" />
+    <Compile Include="Migrations\201702221124506_Create2.Designer.cs">
+      <DependentUpon>201702221124506_Create2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702221223500_Create3.cs" />
+    <Compile Include="Migrations\201702221223500_Create3.Designer.cs">
+      <DependentUpon>201702221223500_Create3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Content.cs" />
     <Compile Include="Model\ContentType.cs" />
     <Compile Include="Model\Image.cs" />
@@ -76,6 +85,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702161209173_Create1.resx">
       <DependentUpon>201702161209173_Create1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702221124506_Create2.resx">
+      <DependentUpon>201702221124506_Create2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702221223500_Create3.resx">
+      <DependentUpon>201702221223500_Create3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from karlomikus.com/saltkin/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 14:52:57 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saltkin &dash; Responsive Admin &amp; Dashboard UI Template</title>
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,400italic%7cMontserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Icons -->
+    <link href="~/Content/css/typicons.min.css" rel="stylesheet">
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- iCheck - Custom radio/check input -->
+    <link href="~/Content/css/icheck/minimal.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Footable plugin -->
+    <link href="~/Content/css/plugins.min.css" rel="stylesheet">
+    <!-- Template -->
+    <link href="~/Content/css/main.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/plugins/shiv.min.js"></script>
+      <script src="js/plugins/respond.min.js"></script>
+      <script src="js/plugins/excanvas.min.js"></script>
+    <![endif]-->
+</head>
+<body class="login-page">
+
+    <!-- Page container -->
+    <div class="container">
+        <p class="text-center">
+            <img src="img/logo.png" alt="Logo"><br><br>
+            Welcome to Zathura admin dashboard ,
+        </p>
+        <div class="login-buttons">
+            <button class="btn btn-login" data-toggle="modal" data-target="#loginModal">Sign in</button>
+        </div>
+    </div>
+    <!-- /Page container -->
+    <!-- Login modal -->
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        Html.AntiForgeryToken();
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Please sign in</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="e-mail" name="Email" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="password" name="Password" required>
+                        </div>
+                        <label class="checkbox">
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" >Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    <!-- SCRIPTS -->
+    <!-- PLUGINS ALL -->
+    <script src="~/Scripts/plugins/jquery.min.js"></script>
+    <script src="~/Scripts/plugins/modernizr.min.js"></script>
+    <!-- Bootstrap core -->
+    <script src="~/Scripts/plugins/bootstrap.min.js"></script>
+    <!-- Custom scrollbar -->
+    <script src="~/Scripts/plugins/enscroll.min.js"></script>
+    <!-- Dynamic tables -->
+    <script src="~/Scripts/plugins/footable.min.js"></script>
+    <!-- Knob / Donut charts -->
+    <script src="~/Scripts/plugins/knob.min.js"></script>
+    <!-- Rickshaw graphs & charts -->
+    <script src="~/Scripts/plugins/sparkline.min.js"></script>
+    <script src="~/Scripts/plugins/rickshaw/d3.v3.js"></script>
+    <script src="~/Scripts/plugins/rickshaw/rickshaw.min.js"></script>
+    <!-- Flot -->
+    <script src="~/Scripts/plugins/flot.min.js"></script>
+    <!-- Custom checkboxes and radio input -->
+    <script src="~/Scripts/plugins/icheck.min.js"></script>
+    <!-- Page specific -->
+    <script src="~/Scripts/page-dashboard.js"></script>
+    <!-- Site -->
+    <script src="~/Scripts/main.js"></script>
+</body>
+
+<!-- Mirrored from karlomikus.com/saltkin/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 14:52:57 GMT -->
+</html>
+

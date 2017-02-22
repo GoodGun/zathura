@@ -48,5 +48,7 @@ namespace Zathura.Data.Model
         public virtual ICollection<Image> ImageItems { get; set; }
 
         public virtual ContentType ContentType { get; set; }
+
+        public virtual Category Category { get; set; }
     }
 }

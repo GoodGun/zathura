@@ -23,7 +23,6 @@ namespace Zathura.Data.Model
         [Display(Name = "e-mail")]
         [Required]
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Geçerli bir e-mail adresi giriniz!")]
-        //RegEx Attribute bulunabilir
         public string Email { get; set; }
 
         [MaxLength(16, ErrorMessage = "Şifre Alanı 16 karakterden uzun olamaz!")]
@@ -38,6 +37,6 @@ namespace Zathura.Data.Model
         [Display(Name = "Durumu")]
         public bool IsActive { get; set; }
 
-        public virtual Role Rol { get; set; }
+        public virtual Role Role { get; set; }
     }
 }
