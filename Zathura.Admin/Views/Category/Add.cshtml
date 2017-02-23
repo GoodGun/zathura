@@ -1,4 +1,4 @@
-﻿
+﻿@model Zathura.Data.Model.Category
 @{
     ViewBag.Title = "Add Category";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,6 +12,10 @@
                 <header class="panel-heading">@ViewBag.Title</header>
                 <div class="panel-body">
                     <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Parent Category Name</label>
+                            @Html.DropDownListFor(model => model.Name, new SelectList(ViewBag.ParentCategoryList, "CategoryId", "Name"), ("Select Item"), new {@class = "form-control", id = "ParentCategoryId"})
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Category Name</label>
                             <input type="email" class="form-control" id="categoryName" placeholder="Category Name">
@@ -34,5 +38,3 @@
     <!-- /Basic form -->
     
 </div>
-
-<script src="~/Scripts/Global.js"></script>

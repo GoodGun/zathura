@@ -167,6 +167,7 @@
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\tickc81e.html" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\Global.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\page-bootstrap.js" />
@@ -174,6 +175,24 @@
     <Content Include="Scripts\page-charts.js" />
     <Content Include="Scripts\page-dashboard.js" />
     <Content Include="Scripts\page-form-elements.js" />
+    <Content Include="Scripts\plugins\bootstrap.min.js" />
+    <Content Include="Scripts\plugins\calendar\calendar.min.js" />
+    <Content Include="Scripts\plugins\calendar\underscore.min.js" />
+    <Content Include="Scripts\plugins\datepicker\datetimepicker.min.js" />
+    <Content Include="Scripts\plugins\datepicker\moment.min.js" />
+    <Content Include="Scripts\plugins\enscroll.min.js" />
+    <Content Include="Scripts\plugins\flot.min.js" />
+    <Content Include="Scripts\plugins\footable.min.js" />
+    <Content Include="Scripts\plugins\icheck.min.js" />
+    <Content Include="Scripts\plugins\jquery.min.js" />
+    <Content Include="Scripts\plugins\knob.min.js" />
+    <Content Include="Scripts\plugins\maskedinput.min.js" />
+    <Content Include="Scripts\plugins\modernizr.min.js" />
+    <Content Include="Scripts\plugins\multimenu.min.js" />
+    <Content Include="Scripts\plugins\rickshaw\d3.v3.js" />
+    <Content Include="Scripts\plugins\rickshaw\rickshaw.min.js" />
+    <Content Include="Scripts\plugins\sparkline.min.js" />
+    <Content Include="Scripts\plugins\summernote.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -188,6 +207,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\BootStrapper.cs" />
+    <Compile Include="Helper\ResultJson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +241,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="connections.config" />
     <Content Include="Views\Category\Add.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -231,7 +252,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\plugins\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Zathura.Core\Zathura.Core.csproj">

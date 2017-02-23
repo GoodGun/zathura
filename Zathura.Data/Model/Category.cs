@@ -13,6 +13,7 @@ namespace Zathura.Data.Model
         public int CategoryId { get; set; }
 
         [MinLength(2, ErrorMessage = "Lütfen {0} karakterden uzun değer giriniz!"), MaxLength(150, ErrorMessage = "Lütfen 150 karakterden kısa değer giriniz!")]
+        [Required]
         public string Name { get; set; }
 
         public int ParentCategoryId { get; set; }
