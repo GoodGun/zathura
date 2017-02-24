@@ -6,11 +6,17 @@ using System.Web.Mvc;
 using Zathura.Admin.Helper;
 using Zathura.Core.Infrastructure;
 using Zathura.Data.Model;
+using PagedList;
 
 namespace Zathura.Admin.Controllers
 {
     public class CategoryController : Controller
     {
+        #region Primitives
+
+        public const int PagingCount = 20;
+        #endregion
+
         #region Category
         private readonly ICategoryRepository _categoryRepository;
 
@@ -20,9 +26,9 @@ namespace Zathura.Admin.Controllers
         }
         #endregion
         // GET: Category
-        public ActionResult Index()
+        public ActionResult Index(int p=1)
         {
-            return View();
+            return View(_categoryRepository.GetAll().OrderByDescending(x => x.CategoryId).ToPagedList(p, PagingCount));
         }
 
         #region Add Category
@@ -49,5 +55,21 @@ namespace Zathura.Admin.Controllers
             }
         }
         #endregion
+
+        #region Delete Category
+        public ActionResult Delete(int categoryId)
+        {
+            var category = _categoryRepository.GetById(categoryId);
+            if (category == null)
+            {
+                return Json(new ResultJson { Success = false, Message = "Category couldn't found!" });
+            }
+            _categoryRepository.Delete(categoryId);
+            _categoryRepository.Save();
+            return Json(new ResultJson { Success = true, Message = "Category deleted successfully..." });
+        }
+        #endregion
+
+
     }
 }

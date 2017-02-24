@@ -24,3 +24,24 @@
         }
     });
 }
+
+function DeleteCategory() {
+    var categoryId = $("#catDeleteBtn").attr("data-id");
+    $.ajax({
+        url: '/category/delete/' + categoryId,
+        type: "POST",
+        datatype: 'json',
+        success: function (response) {
+            if (response.Success) {
+                bootbox.alert(response.Message, function () {
+                    location.reload();
+                });
+            }
+            else {
+                bootbox.alert(response.Message, function () {
+
+                });
+            }
+        }
+    });
+}

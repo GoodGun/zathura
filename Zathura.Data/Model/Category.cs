@@ -23,6 +23,8 @@ namespace Zathura.Data.Model
 
         public bool IsActive { get; set; }
 
+        public virtual User User { get; set; }
+
         public virtual ICollection<Content> Contents { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Zathura.Data.Model.Category>
 @{
     ViewBag.Title = "Category List";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,48 +17,42 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
+                                    <th>#</th>
+                                    <th>Category</th>
+                                    <th>Main Category</th>
                                     <th>Status</th>
-                                    <th>Title</th>
-                                    <th>Date</th>
-                                    <th>Info</th>
                                     <th>Author</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><span class="label label-success">Complete</span></td>
-                                    <td>Lorem ipsum dolor sit amet</td>
-                                    <td>2014/09/25</td>
-                                    <td>Server updates and maintenance</td>
-                                    <td><a href="#">Admin</a></td>
-                                    <td>
-                                        <button class="btn btn-default btn-sm">Edit</button>
-                                        <button class="btn btn-default btn-sm">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span class="label label-success">Complete</span></td>
-                                    <td>Lorem ipsum dolor sit amet</td>
-                                    <td>2014/09/25</td>
-                                    <td>Server updates and maintenance</td>
-                                    <td><a href="#">Admin</a></td>
-                                    <td>
-                                        <button class="btn btn-default btn-sm">Edit</button>
-                                        <button class="btn btn-default btn-sm">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span class="label label-success">Complete</span></td>
-                                    <td>Lorem ipsum dolor sit amet</td>
-                                    <td>2014/09/25</td>
-                                    <td>Server updates and maintenance</td>
-                                    <td><a href="#">Admin</a></td>
-                                    <td>
-                                        <button class="btn btn-default btn-sm">Edit</button>
-                                        <button class="btn btn-default btn-sm">Delete</button>
-                                    </td>
-                                </tr>
+                            @if (Model != null && Model.Any())
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td><span class="label label-success">@item.CategoryId</span></td>
+                                        <td>@item.Name</td>
+                                        <td>@item.ParentCategoryId</td>
+                                        <td>@if (item.IsActive)
+                                            {
+                                                <b class="label label-success">Active</b>
+                                        }
+                                        else
+                                        {
+                                            <b class="label label-danger">Passive</b>
+                                        }
+                                        </td>
+                                        <td><a href="#">@(item.User.Name + " " + item.User.Surname)</a></td>
+                                        <td>
+                                            <button class="btn btn-default btn-sm">Edit</button>
+                                            <button class="btn btn-default btn-sm" id="catDeleteBtn" onclick="DeleteCategory()" data-id="@item.CategoryId">Delete</button>
+                                            @*@Html.ActionLink("Delete","Delete",new {categoryId = item.CategoryId},new {onclick="return confirm('Are you sure want to delete?')"})*@
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            
                             </tbody>
                         </table>
                     </div>
