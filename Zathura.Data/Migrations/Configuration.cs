@@ -9,7 +9,7 @@ namespace Zathura.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Zathura.Data.DataContext.ZathuraContext context)

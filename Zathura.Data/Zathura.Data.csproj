@@ -50,21 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext\ZathuraContext.cs" />
-    <Compile Include="Migrations\201702161056526_Create.cs" />
-    <Compile Include="Migrations\201702161056526_Create.Designer.cs">
-      <DependentUpon>201702161056526_Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702161209173_Create1.cs" />
-    <Compile Include="Migrations\201702161209173_Create1.Designer.cs">
-      <DependentUpon>201702161209173_Create1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702221124506_Create2.cs" />
-    <Compile Include="Migrations\201702221124506_Create2.Designer.cs">
-      <DependentUpon>201702221124506_Create2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702221223500_Create3.cs" />
-    <Compile Include="Migrations\201702221223500_Create3.Designer.cs">
-      <DependentUpon>201702221223500_Create3.cs</DependentUpon>
+    <Compile Include="Migrations\201702250843267_Create.cs" />
+    <Compile Include="Migrations\201702250843267_Create.Designer.cs">
+      <DependentUpon>201702250843267_Create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Category.cs" />
@@ -83,17 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702161056526_Create.resx">
-      <DependentUpon>201702161056526_Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702161209173_Create1.resx">
-      <DependentUpon>201702161209173_Create1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702221124506_Create2.resx">
-      <DependentUpon>201702221124506_Create2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702221223500_Create3.resx">
-      <DependentUpon>201702221223500_Create3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702250843267_Create.resx">
+      <DependentUpon>201702250843267_Create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
