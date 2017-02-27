@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Zathura.Data.Model.Category>
+﻿@model PagedList.IPagedList<Zathura.Data.Model.Category>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Category List";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -16,14 +17,14 @@
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Category</th>
-                                    <th>Main Category</th>
-                                    <th>Status</th>
-                                    <th>Author</th>
-                                    <th>Action</th>
-                                </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Category</th>
+                                <th>Main Category</th>
+                                <th>Status</th>
+                                <th>Author</th>
+                                <th>Action</th>
+                            </tr>
                             </thead>
                             <tbody>
                             @if (Model != null && Model.Any())
@@ -37,15 +38,16 @@
                                         <td>@if (item.IsActive)
                                             {
                                                 <b class="label label-success">Active</b>
-                                        }
-                                        else
-                                        {
-                                            <b class="label label-danger">Passive</b>
-                                        }
+                                            }
+                                            else
+                                            {
+                                                <b class="label label-danger">Passive</b>
+                                            }
                                         </td>
                                         <td><a href="#">@(item.User.Name + " " + item.User.Surname)</a></td>
                                         <td>
-                                            <button class="btn btn-default btn-sm">Edit</button>
+                                            <a href="@Url.Action("Update","Category",new {categoryId = item.CategoryId})" class="btn btn-default btn-sm">Edit</a>
+                                            @*<button class="btn btn-default btn-sm">Edit</button>*@
                                             <button class="btn btn-default btn-sm" id="catDeleteBtn" onclick="DeleteCategory()" data-id="@item.CategoryId">Delete</button>
                                             @*@Html.ActionLink("Delete","Delete",new {categoryId = item.CategoryId},new {onclick="return confirm('Are you sure want to delete?')"})*@
                                         </td>
@@ -56,8 +58,10 @@
                             </tbody>
                         </table>
                     </div>
+                    @Html.PagedListPager(Model, p => Url.Action("Index", new { p }), PagedListRenderOptions.Classic)
                 </div>
             </div>
+            
         </div>
         <!-- /Responsive table -->
     </div>

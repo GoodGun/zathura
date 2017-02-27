@@ -7,14 +7,14 @@ using Zathura.Admin.Helper;
 using Zathura.Core.Infrastructure;
 using Zathura.Data.Model;
 using PagedList;
+using Zathura.Admin.CustomFilter;
 
 namespace Zathura.Admin.Controllers
 {
     public class CategoryController : Controller
     {
         #region Primitives
-
-        public const int PagingCount = 20;
+        private const int PagingCount = 3;
         #endregion
 
         #region Category
@@ -25,11 +25,14 @@ namespace Zathura.Admin.Controllers
             _categoryRepository = categoryRepository;
         }
         #endregion
-        // GET: Category
-        public ActionResult Index(int p=1)
+
+        #region Index
+        [HttpGet]
+        public ActionResult Index(int p = 1)
         {
             return View(_categoryRepository.GetAll().OrderByDescending(x => x.CategoryId).ToPagedList(p, PagingCount));
         }
+        #endregion
 
         #region Add Category
         [HttpGet]
@@ -54,6 +57,40 @@ namespace Zathura.Admin.Controllers
                 return Json(new ResultJson { Success = false, Message = "Category couldnt added!!!", ExceptionMessage = ex.Message, ExStackTrace = ex.StackTrace });
             }
         }
+        #endregion
+
+        #region Update Category
+        [HttpGet]
+        [LoginFilter]
+        public ActionResult Update(int categoryId)
+        {
+            var category = _categoryRepository.GetById(categoryId);
+            if (category == null)
+            {
+                throw new Exception("Category couldn't found!");
+            }
+            var parentCatList = _categoryRepository.GetMany(x => x.ParentCategoryId == 0 && x.IsActive).ToList();
+            ViewBag.ParentCategoryList = parentCatList;
+            return View(category);
+        }
+
+        [HttpPost]
+        [LoginFilter]
+        public JsonResult Update(Category category)
+        {
+            //if (ModelState.IsValid)
+            //{
+                var categoryItem = _categoryRepository.GetById(category.CategoryId);
+                categoryItem.IsActive = category.IsActive;
+                categoryItem.Name = category.Name;
+                categoryItem.ParentCategoryId = category.ParentCategoryId;
+                categoryItem.Url = category.Url;
+                _categoryRepository.Save();
+                return Json(new ResultJson {Success = true, Message = "Category updated successfully."});
+            //}
+            //return Json(new ResultJson { Success = false, Message = "Category couldn't updated!" });
+        }
+
         #endregion
 
         #region Delete Category
