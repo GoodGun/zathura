@@ -40,7 +40,7 @@ namespace Zathura.Core.Repository
 
         public Content GetById(int id)
         {
-            return _context.Contents.FirstOrDefault(x => x.ContentId == id);
+            return _context.Contents.FirstOrDefault(x => x.ID == id);
         }
 
         public IQueryable<Content> GetMany(Expression<Func<Content, bool>> expression)

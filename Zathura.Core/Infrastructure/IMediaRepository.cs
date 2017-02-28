@@ -7,7 +7,7 @@ using Zathura.Data.Model;
 
 namespace Zathura.Core.Infrastructure
 {
-    public interface IImageRepository : IRepository<Image>
+    public interface IMediaRepository : IRepository<Media>
     {
     }
 }

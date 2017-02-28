@@ -51,20 +51,20 @@
   <ItemGroup>
     <Compile Include="Helper\Enums.cs" />
     <Compile Include="Helper\Structs.cs" />
+    <Compile Include="Infrastructure\ISystemSettingRepository.cs" />
     <Compile Include="Infrastructure\ICategoryRepository.cs" />
     <Compile Include="Infrastructure\IUserRepository.cs" />
     <Compile Include="Infrastructure\IRoleRepository.cs" />
-    <Compile Include="Infrastructure\IImageRepository.cs" />
-    <Compile Include="Infrastructure\IContentTypeRepository.cs" />
+    <Compile Include="Infrastructure\IMediaRepository.cs" />
     <Compile Include="Infrastructure\IContentRepository.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\SystemSettingRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\ContentRepository.cs" />
-    <Compile Include="Repository\ContentTypeRepository.cs" />
     <Compile Include="Repository\RoleRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="Repository\ImageRepository.cs" />
+    <Compile Include="Repository\MediaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,6 +8,7 @@ using Zathura.Core.Infrastructure;
 using Zathura.Data.Model;
 using PagedList;
 using Zathura.Admin.CustomFilter;
+using Zathura.Core.Helper;
 
 namespace Zathura.Admin.Controllers
 {
@@ -30,7 +31,7 @@ namespace Zathura.Admin.Controllers
         [HttpGet]
         public ActionResult Index(int p = 1)
         {
-            return View(_categoryRepository.GetAll().OrderByDescending(x => x.CategoryId).ToPagedList(p, PagingCount));
+            return View(_categoryRepository.GetAll().OrderByDescending(x => x.ID).ToPagedList(p, PagingCount));
         }
         #endregion
 
@@ -38,7 +39,7 @@ namespace Zathura.Admin.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            var parentCatList = _categoryRepository.GetMany(x => x.ParentCategoryId == 0 && x.IsActive).ToList();
+            var parentCatList = _categoryRepository.GetMany(x => x.ParentCategoryId == 0 && x.Status == (int)Status.Active).ToList();
             ViewBag.ParentCategoryList = parentCatList;
             return View();
         }
@@ -69,7 +70,7 @@ namespace Zathura.Admin.Controllers
             {
                 throw new Exception("Category couldn't found!");
             }
-            var parentCatList = _categoryRepository.GetMany(x => x.ParentCategoryId == 0 && x.IsActive).ToList();
+            var parentCatList = _categoryRepository.GetMany(x => x.ParentCategoryId == 0 && x.Status == (int)Status.Active).ToList();
             ViewBag.ParentCategoryList = parentCatList;
             return View(category);
         }
@@ -80,8 +81,8 @@ namespace Zathura.Admin.Controllers
         {
             //if (ModelState.IsValid)
             //{
-                var categoryItem = _categoryRepository.GetById(category.CategoryId);
-                categoryItem.IsActive = category.IsActive;
+                var categoryItem = _categoryRepository.GetById(category.ID);
+                categoryItem.Status = category.Status;
                 categoryItem.Name = category.Name;
                 categoryItem.ParentCategoryId = category.ParentCategoryId;
                 categoryItem.Url = category.Url;

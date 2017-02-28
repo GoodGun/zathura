@@ -30,7 +30,7 @@ namespace Zathura.Admin.Controllers
         public ActionResult Login(User user)
         {
             var userExists =
-                _userRepository.GetMany(x => x.Email == user.Email && x.Password == user.Password && x.IsActive == true)
+                _userRepository.GetMany(x => x.Email == user.Email && x.Password == user.Password && x.Status == (int)Status.Active)
                     .SingleOrDefault();
             if (userExists != null) 
             {

@@ -1,4 +1,5 @@
-﻿@model Zathura.Data.Model.Category
+﻿@using Zathura.Core.Helper
+@model Zathura.Data.Model.Category
 @{
     ViewBag.Title = "Update";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +12,7 @@
             <div class="panel panel-default">
                 <header class="panel-heading">@ViewBag.Title</header>
                 <div class="panel-body">
-                    @Html.HiddenFor(x=> x.CategoryId)
+                    @Html.HiddenFor(x=> x.ID)
                     <form role="form">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Parent Category Name</label>
@@ -27,7 +28,7 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                @Html.CheckBoxFor(x => x.IsActive, new { @checked = "checked", id = "categoryIsActive" }) Is Active?
+                                @Html.CheckBoxFor(x => x.Status == (int)Status.Active, new { @checked = "checked", id = "categoryIsActive" }) Is Active?
                             </label>
                         </div>
                         <a href="#" class="btn btn-default" onclick="UpdateCategory()">Save</a>

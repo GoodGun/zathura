@@ -40,7 +40,7 @@ namespace Zathura.Core.Repository
 
         public Role GetById(int id)
         {
-            return _context.Roles.FirstOrDefault(x => x.RoleId == id);
+            return _context.Roles.FirstOrDefault(x => x.ID == id);
         }
 
         public IQueryable<Role> GetMany(Expression<Func<Role, bool>> expression)

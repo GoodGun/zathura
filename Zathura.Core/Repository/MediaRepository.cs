@@ -11,12 +11,12 @@ using Zathura.Data.Model;
 
 namespace Zathura.Core.Repository
 {
-    public class ImageRepository : IImageRepository
+    public class MediaRepository : IMediaRepository
     {
         private readonly ZathuraContext _context = new ZathuraContext();
         public int Count()
         {
-            return _context.Images.Count();
+            return _context.Medias.Count();
         }
 
         public void Delete(int id)
@@ -24,33 +24,33 @@ namespace Zathura.Core.Repository
             var item = GetById(id);
             if (item != null)
             {
-                _context.Images.Remove(item);
+                _context.Medias.Remove(item);
             }
         }
 
-        public Image Get(Expression<Func<Image, bool>> expression)
+        public Media Get(Expression<Func<Media, bool>> expression)
         {
-            return _context.Images.FirstOrDefault(expression);
+            return _context.Medias.FirstOrDefault(expression);
         }
 
-        public IEnumerable<Image> GetAll()
+        public IEnumerable<Media> GetAll()
         {
-            return _context.Images.Select(x => x);
+            return _context.Medias.Select(x => x);
         }
 
-        public Image GetById(int id)
+        public Media GetById(int id)
         {
-            return _context.Images.FirstOrDefault(x => x.ImageId == id);
+            return _context.Medias.FirstOrDefault(x => x.ID == id);
         }
 
-        public IQueryable<Image> GetMany(Expression<Func<Image, bool>> expression)
+        public IQueryable<Media> GetMany(Expression<Func<Media, bool>> expression)
         {
-            return _context.Images.Where(expression);
+            return _context.Medias.Where(expression);
         }
 
-        public void Insert(Image obj)
+        public void Insert(Media obj)
         {
-            _context.Images.Add(obj);
+            _context.Medias.Add(obj);
         }
 
         public void Save()
@@ -58,9 +58,9 @@ namespace Zathura.Core.Repository
             _context.SaveChanges();
         }
 
-        public void Update(Image obj)
+        public void Update(Media obj)
         {
-            _context.Images.AddOrUpdate();
+            _context.Medias.AddOrUpdate();
         }
     }
 }

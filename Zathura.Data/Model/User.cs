@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Zathura.Data.Model
 {
-    public class User
+    public class User : BaseEntity
     {
-        [Key]
-        public int UserId { get; set; }
 
         [MaxLength(50, ErrorMessage = "Ad Alanı 50 karakterden uzun olamaz!")]
         [Display(Name = "Ad")]
@@ -30,13 +28,7 @@ namespace Zathura.Data.Model
         [Display(Name = "Şifre")]
         [Required]
         public string Password { get; set; }
-
-        [Display(Name = "Kayıt Tarihi")]
-        public DateTime CreateDate { get; set; }
-
-        [Display(Name = "Durumu")]
-        public bool IsActive { get; set; }
-
+        
         public virtual Role Role { get; set; }
     }
 }

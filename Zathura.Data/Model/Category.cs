@@ -7,22 +7,17 @@ using System.Threading.Tasks;
 
 namespace Zathura.Data.Model
 {
-    public class Category
+    public class Category : BaseEntity
     {
-        [Key]
-        public int CategoryId { get; set; }
+        public int ParentCategoryId { get; set; }
 
         [MinLength(2, ErrorMessage = "Lütfen {0} karakterden uzun değer giriniz!"), MaxLength(150, ErrorMessage = "Lütfen 150 karakterden kısa değer giriniz!")]
         [Required]
         public string Name { get; set; }
 
-        public int ParentCategoryId { get; set; }
-
         [MinLength(2, ErrorMessage = "Lütfen {0} karakterden uzun değer giriniz!"), MaxLength(150, ErrorMessage = "Lütfen 150 karakterden kısa değer giriniz!")]
         public string Url { get; set; }
-
-        public bool IsActive { get; set; }
-
+        
         public virtual User User { get; set; }
 
         public virtual ICollection<Content> Contents { get; set; }

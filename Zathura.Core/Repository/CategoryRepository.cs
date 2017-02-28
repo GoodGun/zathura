@@ -40,7 +40,7 @@ namespace Zathura.Core.Repository
 
         public Category GetById(int id)
         {
-            return _context.Categories.FirstOrDefault(x => x.CategoryId == id);
+            return _context.Categories.FirstOrDefault(x => x.ID == id);
         }
 
         public IQueryable<Category> GetMany(Expression<Func<Category, bool>> expression)

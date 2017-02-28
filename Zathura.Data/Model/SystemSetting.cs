@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace Zathura.Data.Model
 {
-    public class Image
+    public class SystemSetting
     {
         [Key]
-        public int ImageId { get; set; }
+        public int ID { get; set; }
 
-        [Display(Name = "Image Path")]
-        public string ImageUrl { get; set; }
+        public string Key { get; set; }
 
-        public Content Content { get; set; }
+        public string Value { get; set; }
+
+        public string Description { get; set; }
     }
 }

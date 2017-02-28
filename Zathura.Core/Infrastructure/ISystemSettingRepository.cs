@@ -7,7 +7,7 @@ using Zathura.Data.Model;
 
 namespace Zathura.Core.Infrastructure
 {
-    public interface IContentTypeRepository : IRepository<ContentType>
+    public interface ISystemSettingRepository : IRepository<SystemSetting>
     {
     }
 }

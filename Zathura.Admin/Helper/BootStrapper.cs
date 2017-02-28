@@ -23,11 +23,11 @@ namespace Zathura.Admin.Helper
             var builder = new ContainerBuilder();
 
             builder.RegisterType<ContentRepository>().As<IContentRepository>();
-            builder.RegisterType<ContentTypeRepository>().As<IContentTypeRepository>();
-            builder.RegisterType<ImageRepository>().As<IImageRepository>();
+            builder.RegisterType<MediaRepository>().As<IMediaRepository>();
             builder.RegisterType<RoleRepository>().As<IRoleRepository>();
             builder.RegisterType<UserRepository>().As<IUserRepository>();
             builder.RegisterType<CategoryRepository>().As<ICategoryRepository>();
+            builder.RegisterType<SystemSettingRepository>().As<ISystemSettingRepository>();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             var container = builder.Build();

@@ -6,5 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zathura.Core.Helper
 {
-
+    public enum Status
+    {
+        Passive = 0,
+        Active = 1
+    }
 }

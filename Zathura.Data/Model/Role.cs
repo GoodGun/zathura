@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace Zathura.Data.Model
 {
-    public class Role
+    public class Role : BaseEntity
     {
-        [Key]
-        public int RoleId { get; set; }
-
         [Display(Name = "Rol Adı :")]
         [MinLength(3, ErrorMessage = "Lütfen 3 karakterden uzun değer giriniz!"), MaxLength(20, ErrorMessage = "Lütfen 20 karakterden kısa değer giriniz!")]
         public string Name { get; set; }
