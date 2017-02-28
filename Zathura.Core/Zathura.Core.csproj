@@ -55,7 +55,7 @@
     <Compile Include="Infrastructure\ICategoryRepository.cs" />
     <Compile Include="Infrastructure\IUserRepository.cs" />
     <Compile Include="Infrastructure\IRoleRepository.cs" />
-    <Compile Include="Infrastructure\IMediaRepository.cs" />
+    <Compile Include="Infrastructure\IMediaItemRepository.cs" />
     <Compile Include="Infrastructure\IContentRepository.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,7 +64,7 @@
     <Compile Include="Repository\ContentRepository.cs" />
     <Compile Include="Repository\RoleRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="Repository\MediaRepository.cs" />
+    <Compile Include="Repository\MediaItemRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

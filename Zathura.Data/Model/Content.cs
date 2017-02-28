@@ -34,7 +34,7 @@ namespace Zathura.Data.Model
         [Display(Name = "Image")]
         public string MediaItem { get; set; }
 
-        public virtual ICollection<Media> Medias { get; set; }
+        public virtual ICollection<MediaItem> MediaItems { get; set; }
         
         public virtual Category Category { get; set; }
     }

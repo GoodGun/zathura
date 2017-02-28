@@ -49,11 +49,12 @@ namespace Zathura.Data.Migrations
                 .Index(t => t.User_ID);
             
             CreateTable(
-                "dbo.Media",
+                "dbo.MediaItems",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
                         Url = c.String(),
+                        ContentType = c.Int(nullable: false),
                         CreateDate = c.DateTime(nullable: false),
                         UpdateDate = c.DateTime(nullable: false),
                         Status = c.Int(nullable: false),
@@ -111,17 +112,17 @@ namespace Zathura.Data.Migrations
             DropForeignKey("dbo.Categories", "User_ID", "dbo.Users");
             DropForeignKey("dbo.Contents", "User_ID", "dbo.Users");
             DropForeignKey("dbo.Users", "Role_ID", "dbo.Roles");
-            DropForeignKey("dbo.Media", "Content_ID", "dbo.Contents");
+            DropForeignKey("dbo.MediaItems", "Content_ID", "dbo.Contents");
             DropForeignKey("dbo.Contents", "Category_ID", "dbo.Categories");
             DropIndex("dbo.Users", new[] { "Role_ID" });
-            DropIndex("dbo.Media", new[] { "Content_ID" });
+            DropIndex("dbo.MediaItems", new[] { "Content_ID" });
             DropIndex("dbo.Contents", new[] { "User_ID" });
             DropIndex("dbo.Contents", new[] { "Category_ID" });
             DropIndex("dbo.Categories", new[] { "User_ID" });
             DropTable("dbo.SystemSettings");
             DropTable("dbo.Roles");
             DropTable("dbo.Users");
-            DropTable("dbo.Media");
+            DropTable("dbo.MediaItems");
             DropTable("dbo.Contents");
             DropTable("dbo.Categories");
         }

@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace Zathura.Data.Model
 {
-    public class Media : BaseEntity
+    public class MediaItem : BaseEntity
     {
         [Display(Name = "Media Path")]
         public string Url { get; set; }
 
         public Content Content { get; set; }
+
+        public int ContentType { get; set; }
     }
 }

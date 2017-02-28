@@ -50,16 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext\ZathuraContext.cs" />
-    <Compile Include="Migrations\201702280850162_Create.cs" />
-    <Compile Include="Migrations\201702280850162_Create.Designer.cs">
-      <DependentUpon>201702280850162_Create.cs</DependentUpon>
+    <Compile Include="Migrations\201702280936483_Create.cs" />
+    <Compile Include="Migrations\201702280936483_Create.Designer.cs">
+      <DependentUpon>201702280936483_Create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\SystemSetting.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Content.cs" />
-    <Compile Include="Model\Media.cs" />
+    <Compile Include="Model\MediaItem.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +72,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702280850162_Create.resx">
-      <DependentUpon>201702280850162_Create.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702280936483_Create.resx">
+      <DependentUpon>201702280936483_Create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

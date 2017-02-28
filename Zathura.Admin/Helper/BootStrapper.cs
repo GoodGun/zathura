@@ -23,7 +23,7 @@ namespace Zathura.Admin.Helper
             var builder = new ContainerBuilder();
 
             builder.RegisterType<ContentRepository>().As<IContentRepository>();
-            builder.RegisterType<MediaRepository>().As<IMediaRepository>();
+            builder.RegisterType<MediaItemRepository>().As<IMediaItemRepository>();
             builder.RegisterType<RoleRepository>().As<IRoleRepository>();
             builder.RegisterType<UserRepository>().As<IUserRepository>();
             builder.RegisterType<CategoryRepository>().As<ICategoryRepository>();

@@ -13,7 +13,7 @@ namespace Zathura.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201702280850162_Create"; }
+            get { return "201702280936483_Create"; }
         }
         
         string IMigrationMetadata.Source
