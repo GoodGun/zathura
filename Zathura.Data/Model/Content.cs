@@ -26,7 +26,7 @@ namespace Zathura.Data.Model
         [Display(Name = "Yayın Tarihi")]
         public DateTime StartDate { get; set; }
 
-        public int ContentType { get; set; }
+        public int Type { get; set; }
 
         public virtual User User { get; set; }
 

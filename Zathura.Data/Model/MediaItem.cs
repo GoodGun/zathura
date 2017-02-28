@@ -14,6 +14,6 @@ namespace Zathura.Data.Model
 
         public Content Content { get; set; }
 
-        public int ContentType { get; set; }
+        public int Type { get; set; }
     }
 }

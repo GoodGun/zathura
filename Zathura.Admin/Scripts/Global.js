@@ -2,7 +2,7 @@
     Category = new Object();
     Category.Name = $("#categoryName").val();
     Category.Url = $("#categoryUrl").val();
-    Category.IsActive = $("#categoryIsActive").is(":checked");
+    Category.Status = $("#categoryIsActive").is(":checked");
     Category.ParentCategoryId = $("#ParentCategoryId").val();
 
     //alert(Category.Name + Category.Url + Category.IsActive);
@@ -46,13 +46,13 @@ function DeleteCategory() {
     });
 }
 
-function UpdateCategory(parameters) {
+function UpdateCategory() {
     Category = new Object();
     Category.Name = $("#categoryName").val();
     Category.Url = $("#categoryUrl").val();
-    Category.IsActive = $("#categoryIsActive").is(":checked");
+    Category.Status = $("#status").is(":checked");
     Category.ParentCategoryId = $("#ParentCategoryId").val();
-    Category.CategoryId = $("#CategoryId").val();
+    Category.ID = $("#CategoryId").val();
 
     $.ajax({
         url: "/category/update",

@@ -1,5 +1,4 @@
-﻿@using Zathura.Core.Helper
-@model Zathura.Data.Model.Category
+﻿@model Zathura.Data.Model.Category
 @{
     ViewBag.Title = "Update";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -26,10 +25,14 @@
                             <label for="exampleInputEmail1">Url</label>
                             @Html.TextBoxFor(x => x.Url, new {@class = "form-control", id = "categoryUrl", placeholder = "Url"})
                         </div>
-                        <div class="checkbox">
+                        @*<div class="checkbox">
                             <label>
-                                @Html.CheckBoxFor(x => x.Status == (int)Status.Active, new { @checked = "checked", id = "categoryIsActive" }) Is Active?
+                                @Html.CheckBoxFor(x => x.IsActive, new { @checked = "checked", id = "categoryIsActive" }) Is Active?
                             </label>
+                        </div>*@
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Status</label>
+                            @Html.DropDownListFor(model => model.Name, new SelectList(ViewBag.Status, "ID", "Name"), ("Select Item"), new { @class = "form-control", id = "status" })
                         </div>
                         <a href="#" class="btn btn-default" onclick="UpdateCategory()">Save</a>
                     </form>
