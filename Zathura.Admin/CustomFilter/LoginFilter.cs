@@ -12,7 +12,7 @@ namespace Zathura.Admin.CustomFilter
         public void OnActionExecuted(ActionExecutedContext context)
         {
             HttpContextWrapper wrapper = new HttpContextWrapper(HttpContext.Current);
-            var sessionControl = context.HttpContext.Session["UserEmail"];
+            var sessionControl = context.HttpContext.Session["User"];
             if (sessionControl == null)
             {
                 context.Result = new RedirectToRouteResult(

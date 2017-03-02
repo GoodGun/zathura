@@ -1,14 +1,13 @@
 ﻿function AddCategory() {
-    Category = new Object();
-    Category.Name = $("#categoryName").val();
-    Category.Url = $("#categoryUrl").val();
-    Category.Status = $("#categoryIsActive").is(":checked");
-    Category.ParentCategoryId = $("#ParentCategoryId").val();
+    var category = new Object();
+    category.Name = $("#categoryName").val();
+    category.Url = $("#categoryUrl").val();
+    category.Status = $("#status").val() ? $("#status").val() : 0;
+    category.ParentCategoryId = $("#ParentCategoryId").val();
 
-    //alert(Category.Name + Category.Url + Category.IsActive);
     $.ajax({
         url: "/category/add",
-        data: Category,
+        data: category,
         type: "POST",
         success: function (response) {
             if (response.Success) {
@@ -26,6 +25,7 @@
 }
 
 function DeleteCategory() {
+    
     var categoryId = $("#catDeleteBtn").attr("data-id");
     $.ajax({
         url: '/category/delete/' + categoryId,
@@ -47,16 +47,16 @@ function DeleteCategory() {
 }
 
 function UpdateCategory() {
-    Category = new Object();
-    Category.Name = $("#categoryName").val();
-    Category.Url = $("#categoryUrl").val();
-    Category.Status = $("#status").is(":checked");
-    Category.ParentCategoryId = $("#ParentCategoryId").val();
-    Category.ID = $("#CategoryId").val();
+    var category = new Object();
+    category.Name = $("#categoryName").val();
+    category.Url = $("#categoryUrl").val();
+    category.Status = $("#status").val() ? $("#status").val() : 0;
+    category.ParentCategoryId = $("#ParentCategoryId").val();
+    category.ID = $("#ID").val();
 
     $.ajax({
         url: "/category/update",
-        data: Category,
+        data: category,
         type: "POST",
         success: function (response) {
             if (response.Success) {

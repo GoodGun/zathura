@@ -36,7 +36,7 @@ namespace Zathura.Admin.Controllers
             {
                 if (userExists.Role.Name == Roles.Admin)
                 {
-                    Session["UserEmail"] = userExists.Email;
+                    Session["User"] = userExists;
                     return RedirectToAction("Index", "Home");
                 }
                 ViewBag.Message = "Unauthorized User!!!";
