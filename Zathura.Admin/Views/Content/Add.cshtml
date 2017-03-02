@@ -1,0 +1,72 @@
+﻿@model Zathura.Data.Model.Content
+@{
+    ViewBag.Title = "Add Content";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Content/ckeditor/ckeditor.js"></script>
+<div class="container-fluid">
+    <!-- Basic form -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">@ViewBag.Title</header>
+                <div class="panel-body">
+                    @Html.HiddenFor(x => x.ID)
+                    <form role="form">
+                        @*<div class="form-group">
+                            <label for="exampleInputEmail1">Parent Category Name</label>
+                            @Html.DropDownListFor(model => model.Title, new SelectList(ViewBag.ParentCategoryList, "ID", "Name"), ("Select Item"), new {@class = "form-control", id = "ParentCategoryId"})
+                        </div>*@
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Content Title</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", id = "contentTitle", placeholder = "Content Title" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Short Description</label>
+                            @*@Html.TextBoxFor(x => x.ShortDescription, new { @class = "form-control", id = "shortDescription", placeholder = "Short Description" })*@
+                            @Html.TextArea("ShortDescription")
+                            <script type="text/javascript">
+                                var editor = CKEDITOR.instances['ShortDescription'];
+                                if (editor) {
+                                    editor.destroy(true);
+                                }
+                                CKEDITOR.replace('ShortDescription',
+                                {
+                                    enterMode:CKEDITOR.ENTER_BR,
+                                });
+                            </script>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Description</label>
+                            @*@Html.TextAreaFor(x => x.Description, new { @class = "form-control", id = "description", placeholder = "Description" })*@
+                            @Html.TextArea("Description")
+                            <script type="text/javascript">
+                                var editor = CKEDITOR.instances['Description'];
+                                if (editor) {
+                                    editor.destroy(true);
+                                }
+                                CKEDITOR.replace('Description',
+                                {
+                                    enterMode:CKEDITOR.ENTER_BR,
+                                });
+                            </script>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Spot Image</label>
+                            <input type="file" name="mediItem" accept="image/*" class="form-control"/>
+                        </div>
+                        @*<div class="form-group">
+                            <label for="exampleInputEmail1">Status</label>
+                            @Html.DropDownListFor(model => model.Status, new SelectList(ViewBag.StatusList, "Value", "Name"), ("Select Item"), new { @class = "form-control", id = "status" })
+                        </div>*@
+                        
+                        <a href="#" class="btn btn-default" onclick="AddContent()">Save</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Basic form -->
+
+</div>
+

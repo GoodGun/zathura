@@ -1,7 +1,7 @@
 ﻿<aside id="sidebar">
     <!-- Sidebar header -->
     <header class="sidebar-header">
-        <h1><img src="img/logo.png" alt="Saltkin"></h1>
+        <h1><img src="../Content/img/logo.png" alt="Zubat" style="max-height: 40px;"></h1>
         <a href="#" id="make-compact"><span class="typcn typcn-th-menu"></span></a>
         <a href="#" id="hide-menu"><span class="fa fa-caret-square-o-left"></span></a>
     </header>
@@ -14,15 +14,22 @@
             <div class="sidebar-link-addon"><span class="badge bg-green">NEW</span></div>
         </li>
         <li class="has-submenu">
+            <a href="#"><i class="typcn typcn-tabs-outline"></i> <span>Contents</span></a>
+            <div class="sidebar-link-addon"><i class="typcn typcn-plus"></i></div>
+            <!-- Sidebar submenu -->
+            <ul class="sidebar-submenu">
+                <li><a href="@Url.Action("Index","Content")">All Contents</a></li>
+                <li><a href="@Url.Action("Add","Content")">Add Content</a></li>
+            </ul>
+            <!-- /Sidebar submenu -->
+        </li>
+        <li class="has-submenu">
             <a href="#"><i class="typcn typcn-tabs-outline"></i> <span>Categories</span></a>
             <div class="sidebar-link-addon"><i class="typcn typcn-plus"></i></div>
             <!-- Sidebar submenu -->
             <ul class="sidebar-submenu">
-                <li><a href="@Url.Action("Index","Category")">All</a></li>
+                <li><a href="@Url.Action("Index","Category")">All Categories</a></li>
                 <li><a href="@Url.Action("Add","Category")">Add Category</a></li>
-                
-                <li><a href="sidebar_compact.html">Compact sidebar</a></li>
-                <li><a href="boxed.html">Boxed</a></li>
             </ul>
             <!-- /Sidebar submenu -->
         </li>
