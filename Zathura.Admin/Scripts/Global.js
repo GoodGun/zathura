@@ -25,7 +25,6 @@
 }
 
 function DeleteCategory() {
-    
     var categoryId = $("#catDeleteBtn").attr("data-id");
     $.ajax({
         url: '/category/delete/' + categoryId,

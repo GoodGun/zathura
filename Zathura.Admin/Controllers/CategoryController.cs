@@ -125,14 +125,14 @@ namespace Zathura.Admin.Controllers
         #endregion
 
         #region Delete Category
-        public ActionResult Delete(int categoryId)
+        public ActionResult Delete(int id)
         {
-            var category = _categoryRepository.GetById(categoryId);
+            var category = _categoryRepository.GetById(id);
             if (category == null)
             {
                 return Json(new ResultJson { Success = false, Message = "Category couldn't found!" });
             }
-            _categoryRepository.Delete(categoryId);
+            _categoryRepository.Delete(id);
             _categoryRepository.Save();
             return Json(new ResultJson { Success = true, Message = "Category deleted successfully..." });
         }
