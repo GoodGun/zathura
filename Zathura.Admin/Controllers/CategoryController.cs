@@ -16,7 +16,7 @@ namespace Zathura.Admin.Controllers
     public class CategoryController : Controller
     {
         #region Primitives
-        private const int PagingCount = 3;
+        private const int PagingCount = 30;
         #endregion
 
         #region Category & SystemSettings

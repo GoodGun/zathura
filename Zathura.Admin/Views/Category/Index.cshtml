@@ -35,16 +35,22 @@
                                     <tr>
                                         <td><span class="label label-success">@item.ID</span></td>
                                         <td>@item.Name</td>
-                                        <td>@item.ParentCategoryId</td>
-                                        @*<td>@Html.LabelFor()</td>*@
-                                        <td>@if (item.Status == (int)Status.Active)
+                                        <td>
+                                            @foreach (var parent in Model.Where(x => x.ID == item.ParentCategoryId))
                                             {
-                                                <b class="label label-success">Active</b>
+                                                <span>@(!string.IsNullOrEmpty(parent.Name) ? parent.Name : "-")</span>
                                             }
-                                            else
-                                            {
-                                                <b class="label label-danger">Passive</b>
-                                            }
+                                        </td>
+                                        
+                                        <td>
+                                            @if (item.Status == (int) Status.Active)
+                                                 {
+                                                     <b class="label label-success">Active</b>
+                                                 }
+                                                 else
+                                                 {
+                                                     <b class="label label-danger">Passive</b>
+                                                 }
                                         </td>
                                         <td><a href="#">@(item.User.Name + " " + item.User.Surname)</a></td>
                                         <td>
