@@ -11,27 +11,6 @@
         type: "POST",
         success: function (response) {
             if (response.Success) {
-                bootbox.alert(response.Message,function() {
-                    location.reload();
-                });
-            }
-            else {
-                bootbox.alert(response.Message, function() {
-                    
-                });
-            }
-        }
-    });
-}
-
-function DeleteCategory() {
-    var categoryId = $("#catDeleteBtn").attr("data-id");
-    $.ajax({
-        url: '/category/delete/' + categoryId,
-        type: "POST",
-        datatype: 'json',
-        success: function (response) {
-            if (response.Success) {
                 bootbox.alert(response.Message, function () {
                     location.reload();
                 });
@@ -44,6 +23,36 @@ function DeleteCategory() {
         }
     });
 }
+
+/* Delete Category Function Start */
+$(document).on("click", "#catDeleteBtn", function () {
+    var categoryId = $(this).attr("data-id");
+    var deleteRow = $(this).closest("tr");
+
+    bootbox.confirm("Are you sure want to delete?", function (result) {
+            if (result) {
+                $.ajax({
+                    url: '/category/delete/' + categoryId,
+                    type: "POST",
+                    datatype: 'json',
+                    success: function (response) {
+                        if (response.Success) {
+                            $.notify(response.Message, "success");
+                            deleteRow.fadeOut(300,
+                                function() {
+                                    deleteRow.remove();
+                                });
+                        }
+                        else {
+                            $.notify(response.Message, "error");
+                        }
+                    }
+                });
+            }
+        });
+});
+/* Delete Category Function End */
+
 
 function UpdateCategory() {
     var category = new Object();

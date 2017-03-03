@@ -567,6 +567,7 @@
     <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\Global.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\notify.js" />
     <Content Include="Scripts\page-bootstrap.js" />
     <Content Include="Scripts\page-calendar.js" />
     <Content Include="Scripts\page-charts.js" />
