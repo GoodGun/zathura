@@ -11,23 +11,28 @@
             <div class="panel panel-default">
                 <header class="panel-heading">@ViewBag.Title</header>
                 <div class="panel-body">
+                    @Html.HiddenFor(x => x.ID)
                     <form role="form">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Parent Category Name</label>
-                            @Html.DropDownListFor(model => model.Name, new SelectList(ViewBag.ParentCategoryList, "CategoryId", "Name"), ("Select Item"), new {@class = "form-control", id = "ParentCategoryId"})
+                            @Html.DropDownListFor(model => model.Name, new SelectList(ViewBag.ParentCategoryList, "ID", "Name"), ("Select Item"), new {@class = "form-control", id = "ParentCategoryId"})
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Category Name</label>
-                            <input type="email" class="form-control" id="categoryName" placeholder="Category Name">
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", id = "categoryName", placeholder = "Category Name" })
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Url</label>
-                            <input type="text" class="form-control" id="categoryUrl" placeholder="Url">
+                            @Html.TextBoxFor(x => x.Url, new { @class = "form-control", id = "categoryUrl", placeholder = "Url" })
                         </div>
-                        <div class="checkbox">
+                        @*<div class="checkbox">
                             <label>
                                 <input type="checkbox" id="categoryIsActive" checked> Is Active?
                             </label>
+                        </div>*@
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Status</label>
+                            @Html.DropDownListFor(model => model.Name, new SelectList(ViewBag.StatusList, "Value", "Name"), ("Select Item"), new {@class = "form-control", id = "status"})
                         </div>
                         <a href="#" class="btn btn-default" onclick="AddCategory()">Save</a>
                     </form>

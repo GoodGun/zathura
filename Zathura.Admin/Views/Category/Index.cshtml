@@ -35,21 +35,28 @@
                                     <tr>
                                         <td><span class="label label-success">@item.ID</span></td>
                                         <td>@item.Name</td>
-                                        <td>@item.ParentCategoryId</td>
-                                        <td>@if (item.Status == (int)Status.Active)
+                                        <td>
+                                            @foreach (var parent in Model.Where(x => x.ID == item.ParentCategoryId))
                                             {
-                                                <b class="label label-success">Active</b>
+                                                <span>@(!string.IsNullOrEmpty(parent.Name) ? parent.Name : "-")</span>
                                             }
-                                            else
-                                            {
-                                                <b class="label label-danger">Passive</b>
-                                            }
+                                        </td>
+                                        
+                                        <td>
+                                            @if (item.Status == (int) Status.Active)
+                                                 {
+                                                     <b class="label label-success">Active</b>
+                                                 }
+                                                 else
+                                                 {
+                                                     <b class="label label-danger">Passive</b>
+                                                 }
                                         </td>
                                         <td><a href="#">@(item.User.Name + " " + item.User.Surname)</a></td>
                                         <td>
-                                            <a href="@Url.Action("Update","Category",new {categoryId = item.ID})" class="btn btn-default btn-sm">Edit</a>
+                                            <a href="@Url.Action("Update","Category",new {id = item.ID})" class="btn btn-default btn-sm">Edit</a>
                                             @*<button class="btn btn-default btn-sm">Edit</button>*@
-                                            <button class="btn btn-default btn-sm" id="catDeleteBtn" onclick="DeleteCategory()" data-id="@item.ID">Delete</button>
+                                            <button class="btn btn-default btn-sm" id="catDeleteBtn" data-id="@item.ID">Delete</button>
                                             @*@Html.ActionLink("Delete","Delete",new {categoryId = item.CategoryId},new {onclick="return confirm('Are you sure want to delete?')"})*@
                                         </td>
                                     </tr>

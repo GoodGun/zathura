@@ -1,36 +1,14 @@
 ﻿function AddCategory() {
-    Category = new Object();
-    Category.Name = $("#categoryName").val();
-    Category.Url = $("#categoryUrl").val();
-    Category.Status = $("#categoryIsActive").is(":checked");
-    Category.ParentCategoryId = $("#ParentCategoryId").val();
+    var category = new Object();
+    category.Name = $("#categoryName").val();
+    category.Url = $("#categoryUrl").val();
+    category.Status = $("#status").val() ? $("#status").val() : 0;
+    category.ParentCategoryId = $("#ParentCategoryId").val();
 
-    //alert(Category.Name + Category.Url + Category.IsActive);
     $.ajax({
         url: "/category/add",
-        data: Category,
+        data: category,
         type: "POST",
-        success: function (response) {
-            if (response.Success) {
-                bootbox.alert(response.Message,function() {
-                    location.reload();
-                });
-            }
-            else {
-                bootbox.alert(response.Message, function() {
-                    
-                });
-            }
-        }
-    });
-}
-
-function DeleteCategory() {
-    var categoryId = $("#catDeleteBtn").attr("data-id");
-    $.ajax({
-        url: '/category/delete/' + categoryId,
-        type: "POST",
-        datatype: 'json',
         success: function (response) {
             if (response.Success) {
                 bootbox.alert(response.Message, function () {
@@ -45,18 +23,48 @@ function DeleteCategory() {
         }
     });
 }
+
+/* Delete Category Function Start */
+$(document).on("click", "#catDeleteBtn", function () {
+    var categoryId = $(this).attr("data-id");
+    var deleteRow = $(this).closest("tr");
+
+    bootbox.confirm("Are you sure want to delete?", function (result) {
+            if (result) {
+                $.ajax({
+                    url: '/category/delete/' + categoryId,
+                    type: "POST",
+                    datatype: 'json',
+                    success: function (response) {
+                        if (response.Success) {
+                            $.notify(response.Message, "success");
+                            deleteRow.fadeOut(300,
+                                function() {
+                                    deleteRow.remove();
+                                });
+                        }
+                        else {
+                            $.notify(response.Message, "error");
+                        }
+                    }
+                });
+            }
+        });
+});
+/* Delete Category Function End */
+
 
 function UpdateCategory() {
-    Category = new Object();
-    Category.Name = $("#categoryName").val();
-    Category.Url = $("#categoryUrl").val();
-    Category.Status = $("#status").is(":checked");
-    Category.ParentCategoryId = $("#ParentCategoryId").val();
-    Category.ID = $("#CategoryId").val();
+    var category = new Object();
+    category.Name = $("#categoryName").val();
+    category.Url = $("#categoryUrl").val();
+    category.Status = $("#status").val() ? $("#status").val() : 0;
+    category.ParentCategoryId = $("#ParentCategoryId").val();
+    category.ID = $("#ID").val();
 
     $.ajax({
         url: "/category/update",
-        data: Category,
+        data: category,
         type: "POST",
         success: function (response) {
             if (response.Success) {
