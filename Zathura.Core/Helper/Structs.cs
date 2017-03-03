@@ -12,4 +12,9 @@ namespace Zathura.Core.Helper
         public const string Editor = "Editor";
         public const string Member = "Member";
     }
+
+    public struct Session
+    {
+        public const string User = "User";
+    }
 }

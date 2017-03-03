@@ -28,6 +28,7 @@ namespace Zathura.Data.Model
 
         public int Type { get; set; }
 
+        public int UserID { get; set; }
         public virtual User User { get; set; }
 
         [MaxLength(255, ErrorMessage = "Image Alanı 255 karakterden uzun olamaz!")]
@@ -35,7 +36,8 @@ namespace Zathura.Data.Model
         public string MediaItem { get; set; }
 
         public virtual ICollection<MediaItem> MediaItems { get; set; }
-        
+
+        public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace Zathura.Admin.Controllers
         private const int PagingCount = 30;
         #endregion
 
-        #region Category & SystemSettings
+        #region Repositories
         private readonly ICategoryRepository _categoryRepository;
         private readonly ISystemSettingRepository _systemSettingRepository;
 
