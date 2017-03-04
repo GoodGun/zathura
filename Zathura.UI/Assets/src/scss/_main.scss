@@ -6,7 +6,29 @@ body{
     font-family: 'Montserrat', Arial, sans-serif;
 }
 .row-header{
-    padding:30px 0;
+    padding:10px 0;
+    @include media(web){
+        padding:30px 0;
+    }
+    .logo{
+        img{
+            max-height:50px;
+            @include media(web){
+                max-height:inherit;
+            }
+        }
+    }
+    .mobile-menu-trigger{
+        float:right;
+        margin:5px 0;
+        @include media(web){
+            display:none;
+        }
+        i{
+            font-size:30px;
+            margin:5px;
+        }
+    }
 }
 .row-menu{
     margin-bottom:30px;
@@ -15,20 +37,64 @@ body{
     background:$color-spor;
     @include vendor-prefix(border-radius,4px);
     position:relative;
-    &-list{
+}
+
+.menu-wrapper{
+    height:100%;
+    left:0;
+    position:fixed;
+    top:0;
+    width:1px;
+    @include media(web){
+        height:auto;
+        left:inherit;
         position:relative;
-        z-index:12;
-        &-item{
-            float:left;
+        top:inherit;
+        width:100%;
+    }
+}
+
+.menu-list{
+    background:$color-spor;
+    left:-100vw;
+    height:100%;
+    position:relative;
+    transition:left .5s;
+    width:80vw;
+    z-index:12;
+    &.opened{
+        left:0;
+    }
+    @include media(web){
+        left:inherit;
+        height:auto;
+        width:auto;
+    }
+    &-item{
+        width:100%;
+        float:left;
+        padding:5px 15px;
+        @include media(web){
             padding:15px;
-            a{
-                border-bottom:2px solid transparent;
-                color:$color-white;
-                display:block;
-                font-weight:700;
-                line-height:24px;
-                padding:3px 3px 1px;;
-                &:hover{
+            width:auto;
+        }
+        &:first-child{
+            @include media(web){
+                display:none;
+            }
+            img{
+                max-height:50px;
+            }
+        }
+        a{
+            border-bottom:2px solid transparent;
+            color:$color-white;
+            display:block;
+            font-weight:700;
+            line-height:24px;
+            padding:3px 3px 1px;;
+            &:hover{
+                @include media(web){
                     border-bottom:2px solid $color-white;
                 }
             }
@@ -37,19 +103,32 @@ body{
 }
 
 .search{
+    background:#ddd;
     float:right;
     position:absolute;
     right:0;
     top:0;
     width:100%;
     z-index:11;
+    @include media(web){
+        background:transparent;
+    }
     &-trigger{
+        background:$color-spor;
         cursor:pointer;
         display:block;
         float:right;
         height:32px;
-        margin:14px;
+        margin:4px;
+        position:absolute;
+        right:0;
         width:32px;
+        z-index:9;
+        @include media(web){
+            background:transparent;
+            margin:14px;
+            position:relative;
+        }
         i{
             color:$color-white;
             font-size:16px;
@@ -60,20 +139,30 @@ body{
         }
     }
     &-input{
-        float:right;
-        width:92%;
+        float:left;
+        width:100%;
+        @include media(web){
+            float:right;
+            width:30%;
+        }
         .input-text{
             border:0;
             @include vendor-prefix(box-sizing,border-box);
             float:right;
             font-size:20px;
             height:40px;
-            margin:10px 0;
+            margin:0;
             padding:0 30px;
             text-align:center;
-            transition:all .3s linear;
-            visibility:hidden;
-            width:0;
+            @include vendor-prefix(transtion,all .3s linear);
+            visibility:visible;
+            width:100%;
+            @include media(web){
+                @include vendor-prefix(border-radius,5px 0 0 5px);
+                margin:10px 0;
+                visibility:hidden;
+                width:0;
+            }
         }
     }
     &.opened{

@@ -1,2 +1,2 @@
-console.log("aaa"),x=0;
-$(document).ready(function(){$(".search .search-trigger").click(function(){$(this).parent().toggleClass("opened"),setTimeout(function(){$(".search .search-trigger .input-text").focus()},1e3)})});
+
+$(document).ready(function(){innerWidth=window.innerWidth,innerWidth<768?$("body").attr("data-device-type","mobile"):innerWidth>767&&innerWidth<992?$("body").attr("data-device-type","tablet"):($("body").attr("data-device-type","web"),$(".search .search-trigger").click(function(){$(this).parent().toggleClass("opened"),$(".search .search-trigger .input-text").focus()})),innerWidth<992&&$(document).on("click",".mobile-menu-trigger",function(){$(".menu-list").toggleClass("opened")})});

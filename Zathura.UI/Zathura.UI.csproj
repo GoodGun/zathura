@@ -238,6 +238,7 @@
     <Content Include="Assets\bower_components\jquery\src\wrap.js" />
     <Content Include="Assets\dist\css\bootstrap-sass-grid.css" />
     <Content Include="Assets\dist\css\zathura.css" />
+    <Content Include="Assets\dist\img\bugunun-maclari-logo-white.png" />
     <Content Include="Assets\dist\img\bugunun-maclari-logo.png" />
     <Content Include="Assets\dist\js\zathura.js" />
     <Content Include="Assets\src\js\main.js" />
