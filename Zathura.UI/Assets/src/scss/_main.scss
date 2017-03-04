@@ -244,13 +244,20 @@ body{
     }
 }
 
+.row-content{
+    margin-bottom:20px;
+    @include media(web){
+        margin-bottom:30px;
+    }
+}
+
 .match-list{
     &-item{
         background:$color-white;
         display:block;
         float:left;
-        height:70px;
         margin-bottom:3px;
+        min-height:70px;
         padding:15px;
         position:relative;
         width:100%;
@@ -267,17 +274,27 @@ body{
             width:70px;
         }
         &-info{
-            padding-left:100px;
+            padding-left:85px;
         }
         &-name{
             color:$color-cod-gray;
             display:block;
-            font:400 20px/24px 'Montserrat';
+            font:400 16px/20px 'Montserrat';
+            margin-bottom:5px;
+            @include media(web){
+                font-size:20px;
+                line-height:24px;
+                margin:0;
+            }
         }
         &-channel{
             color:$color-spor;
             display:block;
-            font:500 16px/22px 'Montserrat';
+            font:500 14px/18px 'Montserrat';
+            @include media(web){
+                font-size:16px;
+                line-height:22px;
+            }
         }
     }
 }
@@ -286,8 +303,10 @@ body{
     background:$color-white;
     border:1px solid $color-mercury;
     padding:4px;
+    text-align:center;
     img{
         display:block;
+        margin:0 auto;
     }
 }
 

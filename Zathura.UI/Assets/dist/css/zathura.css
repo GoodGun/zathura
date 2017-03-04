@@ -1143,10 +1143,17 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .row-head-match .head-match-info .match-info-channel small{background:#e74c3c;-webkit-border-radius:50%;-ms-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;display:block;float:left;height:12px;margin:6px 6px 6px 0;width:12px}
 .row-head-match .head-match-info .match-info-teams{color:#151515;font:700 20px/24px Montserrat;margin-bottom:5px}
 .row-head-match .head-match-info .match-info-date,.row-head-match .head-match-info .match-info-place{color:#666;font:400 14px/22px Montserrat}
-.match-list-item{background:#fff;display:block;float:left;height:70px;margin-bottom:3px;padding:15px;position:relative;width:100%}
+.row-content{margin-bottom:20px}
+@media (min-width:992px){.row-content{margin-bottom:30px}
+}
+.match-list-item{background:#fff;display:block;float:left;margin-bottom:3px;min-height:70px;padding:15px;position:relative;width:100%}
 .match-list-item-time{background:#ffc600;height:40px;font-size:20px;font-weight:700;left:15px;line-height:40px;position:absolute;text-align:center;top:15px;width:70px}
-.match-list-item-info{padding-left:100px}
-.match-list-item-name{color:#151515;display:block;font:400 20px/24px Montserrat}
-.match-list-item-channel{color:#00b551;display:block;font:500 16px/22px Montserrat}
-.adv-content{background:#fff;border:1px solid #e5e5e5;padding:4px}
-.adv-content img{display:block}
+.match-list-item-info{padding-left:85px}
+.match-list-item-name{color:#151515;display:block;font:400 16px/20px Montserrat;margin-bottom:5px}
+@media (min-width:992px){.match-list-item-name{font-size:20px;line-height:24px;margin:0}
+}
+.match-list-item-channel{color:#00b551;display:block;font:500 14px/18px Montserrat}
+@media (min-width:992px){.match-list-item-channel{font-size:16px;line-height:22px}
+}
+.adv-content{background:#fff;border:1px solid #e5e5e5;padding:4px;text-align:center}
+.adv-content img{display:block;margin:0 auto}
