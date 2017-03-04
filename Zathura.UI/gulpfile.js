@@ -15,7 +15,10 @@ var jsTarget = './Assets/dist/js';
 // Sass dosyalarını işler ve oluşturulan CSS dosyasını CSS klasörüne kaydeder.
 gulp.task('styles', function () {
     return gulp.src(cssSource + '/*.scss')
-        .pipe(sass({ style: 'compressed' }))
+        
+        .pipe(sass({
+            includePaths: ['scss'].concat()
+        }))
         .pipe(minifyCss({keepBreaks : true}))
         .pipe(concat('zathura.css'))
         .pipe(gulp.dest(cssTarget));

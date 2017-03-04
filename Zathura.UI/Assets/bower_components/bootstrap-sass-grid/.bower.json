@@ -1,0 +1,43 @@
+{
+  "name": "bootstrap-sass-grid",
+  "homepage": "https://github.com/jojoee/bootstrap-sass-grid",
+  "description": "Bootstrap grid and Responsive utility",
+  "main": [
+    "sass/bootstrap-sass-grid.scss"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "twbs",
+    "bootstrap",
+    "grid",
+    "sass",
+    "css",
+    "bootstrap grid",
+    "responsive"
+  ],
+  "authors": [
+    "Nathachai Thongniran <inid3a@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "bk"
+  ],
+  "version": "4.0.1",
+  "_release": "4.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.0.1",
+    "commit": "16f5547a57a35757759ec4e285cd54fa055a524e"
+  },
+  "_source": "https://github.com/jojoee/bootstrap-sass-grid.git",
+  "_target": "^4.0.1",
+  "_originalSource": "bootstrap-sass-grid",
+  "_direct": true
+}

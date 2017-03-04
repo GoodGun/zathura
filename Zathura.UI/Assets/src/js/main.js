@@ -1,5 +1,9 @@
-﻿console.log("bbb");
-x = 2;
-y = 3;
-z = 0;
-d = 1;
+﻿$(document).ready(function () {
+    $('.search .search-trigger').click(function () {
+        $(this).parent().toggleClass('opened');
+        setTimeout(function () {
+            $('.search .search-trigger .input-text').focus();
+        },1000);
+        
+    });
+});
