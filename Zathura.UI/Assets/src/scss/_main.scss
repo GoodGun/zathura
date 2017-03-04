@@ -31,7 +31,11 @@ body{
     }
 }
 .row-menu{
-    margin-bottom:30px;
+    margin-bottom:20px;
+    min-height:40px;
+    @include media(web){
+        margin-bottom:30px;
+    }
 }
 .menu{
     background:$color-spor;
@@ -183,3 +187,107 @@ body{
         }
     }
 }
+
+.row-head-match{
+    margin-bottom:20px;
+    @include media(web){
+        background:$color-white;
+        border:1px solid $color-mercury;
+        @include vendor-prefix(border-radius,5px);
+        margin:0 0 30px;
+        overflow:hidden;
+    }
+    .head-match-image{
+        @include media(web){
+            padding:0;
+        }
+        .match-image{
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            display:block;
+            padding-bottom:50%;
+            width:100%;
+        }
+    }
+    .head-match-info{
+        @include media(web){
+            padding:0;
+        }
+        .match-info{
+            background:$color-white;
+            padding:20px 15px;
+            &-channel{
+                color:$color-dove-gray;
+                font:700 14px/24px 'Montserrat';
+                margin-bottom:10px;
+                small{
+                    background:$color-spor2;
+                    @include vendor-prefix(border-radius,50%);
+                    display:block;
+                    float:left;
+                    height:12px;
+                    margin:6px 6px 6px 0;
+                    width:12px;
+                }
+            }
+            &-teams{
+                color:$color-cod-gray;
+                font:700 20px/24px 'Montserrat';
+                margin-bottom:5px;
+            }
+            &-place, &-date{
+                color:$color-dove-gray;
+                font:400 14px/22px 'Montserrat';
+            }
+        }
+    }
+}
+
+.match-list{
+    &-item{
+        background:$color-white;
+        display:block;
+        float:left;
+        height:70px;
+        margin-bottom:3px;
+        padding:15px;
+        position:relative;
+        width:100%;
+        &-time{
+            background:$color-spor3;
+            height:40px;
+            font-size:20px;
+            font-weight:700;
+            left:15px;
+            line-height:40px;
+            position:absolute;
+            text-align:center;
+            top:15px;
+            width:70px;
+        }
+        &-info{
+            padding-left:100px;
+        }
+        &-name{
+            color:$color-cod-gray;
+            display:block;
+            font:400 20px/24px 'Montserrat';
+        }
+        &-channel{
+            color:$color-spor;
+            display:block;
+            font:500 16px/22px 'Montserrat';
+        }
+    }
+}
+
+.adv-content{
+    background:$color-white;
+    border:1px solid $color-mercury;
+    padding:4px;
+    img{
+        display:block;
+    }
+}
+

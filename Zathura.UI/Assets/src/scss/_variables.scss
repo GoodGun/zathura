@@ -1,8 +1,13 @@
 ﻿//--Color Palette-----------------------------
 $color-black            : #000;
+$color-cinnabar         : #e74c3c;
+$color-cod-gray         : #151515;
+$color-dove-gray        : #666;
 $color-gallery          : #f0f0f0;
 $color-jade             : #00b551;
+$color-mercury          : #e5e5e5;
 $color-silver           : #ccc;
+$color-supernova        : #ffc600;
 $color-white            : #fff;
 
 //--Standart Colors---------------------------
@@ -11,6 +16,10 @@ $color-white            : #fff;
 //--Units & Rulers----------------------------
 
 $color-spor     : $color-jade;
+$color-spor2    : $color-cinnabar;
+$color-spor3    : $color-supernova;
+$color-spor4    : $color-cinnabar;
+$color-spor5    : $color-cinnabar;
 $web-margin    : 30px;
 $tablet-margin : 30px;
 $mobile-margin : 15px;
