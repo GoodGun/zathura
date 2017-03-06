@@ -18,6 +18,7 @@ $(document).ready(function () {
     if (innerWidth < 992) {
         $(document).on('click', '.mobile-menu-trigger', function () {
             $('.menu-list').toggleClass("opened");
+            $(this).toggleClass("opened");
         });
     }
 

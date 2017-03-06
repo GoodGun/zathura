@@ -28,6 +28,13 @@ body{
             font-size:30px;
             margin:5px;
         }
+        &.opened{
+            i{
+                &:before{
+                    content:"\f00d";
+                }
+            }
+        }
     }
 }
 .row-menu{

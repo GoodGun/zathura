@@ -55,7 +55,7 @@ a,mark{color:#000}
 .fa-th:before{content:"\f00a"}
 .fa-th-list:before{content:"\f00b"}
 .fa-check:before{content:"\f00c"}
-.fa-close:before,.fa-remove:before,.fa-times:before{content:"\f00d"}
+.fa-close:before,.fa-remove:before,.fa-times:before,.row-header .mobile-menu-trigger.opened i:before{content:"\f00d"}
 .fa-search-plus:before{content:"\f00e"}
 .fa-search-minus:before{content:"\f010"}
 .fa-power-off:before{content:"\f011"}
@@ -1095,7 +1095,7 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .row-header .mobile-menu-trigger i{font-size:30px;margin:5px}
 .row-menu{margin-bottom:20px;min-height:40px}
 .menu{-webkit-border-radius:4px;-ms-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;border-radius:4px;position:relative}
-.menu-wrapper{height:100%;left:0;position:fixed;top:0;width:1px}
+.menu-wrapper{height:100%;left:0;position:fixed;top:0;width:1px;z-index:999}
 @media (min-width:992px){.row-header{padding:30px 0}
 .row-header .logo img{max-height:inherit}
 .row-header .mobile-menu-trigger{display:none}
