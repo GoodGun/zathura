@@ -49,6 +49,7 @@ body{
     position:fixed;
     top:0;
     width:1px;
+    z-index:999;
     @include media(web){
         height:auto;
         left:inherit;
