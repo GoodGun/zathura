@@ -252,6 +252,7 @@
     <Content Include="Assets\src\js\main.js" />
     <Content Include="Assets\src\js\jquery.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="google25f1c417fc709f04.html" />
     <Content Include="gulpfile.js" />
     <Content Include="Web.config" />
   </ItemGroup>
