@@ -16,7 +16,7 @@ $(document).ready(function () {
     }
 
     if (innerWidth < 992) {
-        $(document).on('click', '.mobile-menu-trigger', function () {
+        $('.mobile-menu-trigger').on('click', function () {
             $('.menu-list').toggleClass("opened");
             $(this).toggleClass("opened");
         });
