@@ -62,5 +62,11 @@ namespace Zathura.UI.Controllers
             ViewBag.Programs = programs;
             return View();
         }
+
+        public ActionResult Detail()
+        {
+
+            return View("Index");
+        }
     }
 }
