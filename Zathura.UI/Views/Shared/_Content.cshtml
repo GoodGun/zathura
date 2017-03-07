@@ -1,6 +1,7 @@
 ﻿@using Zathura.UI.Models
 @{
     var programs = ViewBag.Programs as List<Program>;
+    var page = ViewBag.Page as string;
 }
 
 <div class="col-xs-12 col-md-8 col-content">
@@ -9,13 +10,30 @@
         {
             foreach (var item in programs)
             {
-                <div class="match-list-item">
-                    <div class="match-list-item-time">@item.Time</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">@item.Name</div>
-                        <div class="match-list-item-channel">@item.Channel</div>
+                if (!string.IsNullOrEmpty(page))
+                {
+                    if (item.Name.Contains(page))
+                    {
+                        <div class="match-list-item">
+                            <div class="match-list-item-time">@item.Time</div>
+                            <div class="match-list-item-info">
+                                <div class="match-list-item-name">@item.Name</div>
+                                <div class="match-list-item-channel">@item.Channel</div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="match-list-item">
+                        <div class="match-list-item-time">@item.Time</div>
+                        <div class="match-list-item-info">
+                            <div class="match-list-item-name">@item.Name</div>
+                            <div class="match-list-item-channel">@item.Channel</div>
+                        </div>
                     </div>
-                </div>
+                }
+
             }
 
         }

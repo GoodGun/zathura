@@ -17,6 +17,18 @@ namespace Zathura.UI.Controllers
         private const string scrapeUrl = "http://www.sporx.com/tvdebugun/";
         public ActionResult Index()
         {
+            GetPage();
+            return View();
+        }
+
+        public ActionResult Filter(string page = "")
+        {
+            GetPage(page);
+            return View("Index");
+        }
+
+        private void GetPage(string page = "")
+        {
             Models.Program spot = null;
             List<Program> programs = null;
 
@@ -53,20 +65,13 @@ namespace Zathura.UI.Controllers
                     };
 
                     programs.Add(program);
-                    
+
                 }
             }
 
-
+            ViewBag.Page = page;
             ViewBag.SpotItem = spot;
             ViewBag.Programs = programs;
-            return View();
-        }
-
-        public ActionResult Detail()
-        {
-
-            return View("Index");
         }
     }
 }

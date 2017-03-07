@@ -3,7 +3,7 @@
 
     "Id": 1,
     "Name": "Futbol",
-    "Url": "#",
+    "Url": "/futbol",
     "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
 
   },
@@ -11,7 +11,7 @@
 
     "Id": 2,
     "Name": "Basketbol",
-    "Url": "#",
+    "Url": "/basketbol",
     "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
 
   },
@@ -19,7 +19,7 @@
 
     "Id": 3,
     "Name": "Voleybol",
-    "Url": "#",
+    "Url": "/voleybol",
     "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
 
   },
@@ -27,7 +27,7 @@
 
     "Id": 4,
     "Name": "Tenis",
-    "Url": "#",
+    "Url": "/tenis",
     "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
 
   }
