@@ -367,7 +367,7 @@ body{
     }
 
     &:after {
-      background:$color-silver;
+      background:$color-spor;
       content: "";
       height: 8px;
       left: 0;
@@ -508,17 +508,20 @@ body{
           }
 
           .fa-caret-up {
-            color: $color-japanese-laurel;
+            color: $color-spor;
           }
 
           .fa-caret-down {
-            color: $color-carmine;
+            color: $color-torch-red;
           }
 
-          .fa-circle {
+          .fa-stop {
             color: $color-biloba-flower;
             font-size: 12px;
             margin-right: 11px;
+            &:before{
+                content:"\f111";
+            }
           }
 
           .team-name {
@@ -591,6 +594,7 @@ body{
   }
 
   .league-table-link {
+      display:none;
     float: right;
     font: 700 14px/18px "Montserrat";
     text-shadow: 0 0 1px $color-white;

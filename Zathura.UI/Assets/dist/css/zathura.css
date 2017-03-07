@@ -1157,7 +1157,7 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 .league-table-wrapper{position:relative}
 .league-table .box-title{margin-bottom:15px;position:relative}
 .league-table .box-title span{background:#f6fff0;font-size:20px;font-weight:400;line-height:20px;padding-right:10px;position:relative;z-index:1}
-.league-table .box-title:after{background:#ccc;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
+.league-table .box-title:after{background:#00b551;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
 .league-table .league-title{color:#999;font-size:12px;line-height:14px;margin-bottom:15px}
 .league-table table thead{border-bottom:2px solid #ccc}
 .league-table table thead tr th{color:#999;font:400 12px/15px Montserrat;padding-bottom:3px;text-align:center;width:9%}
@@ -1177,9 +1177,10 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 .league-table table tbody tr td:nth-child(5n+2){color:#000;padding-left:0;position:relative;text-align:left;width:61%}
 .league-table table tbody tr td:last-child{border-top:none}
 .league-table table tbody tr td .fa{float:right;font-size:18px;line-height:17px;margin-right:10px}
-.league-table table tbody tr td .fa-caret-up{color:#279800}
-.league-table table tbody tr td .fa-caret-down{color:#980020}
-.league-table table tbody tr td .fa-circle{color:#b2aaef;font-size:12px;margin-right:11px}
+.league-table table tbody tr td .fa-caret-up{color:#00b551}
+.league-table table tbody tr td .fa-caret-down{color:#ff1143}
+.league-table table tbody tr td .fa-stop{color:#b2aaef;font-size:12px;margin-right:11px}
+.league-table table tbody tr td .fa-stop:before{content:"\f111"}
 .league-table table tbody tr td .team-name{display:-webkit-box;display:-moz-box;height:18px;line-height:18px;overflow:hidden;-moz-box-orient:vertical;-webkit-box-orient:vertical;-webkit-line-clamp:1}
 .league-table table tbody tr:first-child{border:none}
 .league-table table.showAllTeams .leagueTableExpander{display:none}
@@ -1189,5 +1190,5 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 .league-table .leagueTableExpander span{color:#00b551;font:700 14px/30px Montserrat;height:100%;left:0;max-width:100%;position:absolute;top:0;width:100%;z-index:6}
 @-moz-document url-prefix(){.league-table .leagueTableExpander{bottom:187px}
 }
-.league-table .league-table-link{float:right;font:700 14px/18px Montserrat;text-shadow:0 0 1px #fff}
+.league-table .league-table-link{display:none;float:right;font:700 14px/18px Montserrat;text-shadow:0 0 1px #fff}
 footer{background:#f4f4f4;border-top:1px solid #00b551;padding:20px 15px}
