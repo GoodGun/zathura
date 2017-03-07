@@ -14,9 +14,10 @@ namespace Zathura.UI.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        private const string scrapeUrl = "http://www.sporx.com/tvdebugun/";
         public ActionResult Index()
         {
+            Models.Program spot = null;
             List<Program> programs = null;
 
             var web = new HtmlWeb
@@ -24,7 +25,18 @@ namespace Zathura.UI.Controllers
                 AutoDetectEncoding = false,
                 OverrideEncoding = Encoding.GetEncoding("iso-8859-9")
             };
-            HtmlDocument doc = web.Load( "http://www.sporx.com/tvdebugun/");
+            HtmlDocument doc = web.Load(scrapeUrl);
+
+            var spotItem = doc.DocumentNode.SelectSingleNode("//div[@class='tvmanset-content active']");
+            if (spotItem != null)
+            {
+                spot = new Program
+                {
+                    Name = Common.StripHTML(spotItem.SelectSingleNode(".//h1[@class='ctitle']").InnerHtml),
+                    Channel = Common.StripHTML(spotItem.SelectSingleNode(".//p[@class='cdesc']").InnerHtml)
+                };
+            }
+
             var matchList = doc.DocumentNode.SelectNodes("//ul[@id='channelList']//li");
 
             if (matchList != null && matchList.Any())
@@ -44,6 +56,9 @@ namespace Zathura.UI.Controllers
                     
                 }
             }
+
+
+            ViewBag.SpotItem = spot;
             ViewBag.Programs = programs;
             return View();
         }

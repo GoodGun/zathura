@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var spotItem = ViewBag.SpotItem as Zathura.UI.Models.Program;
 }
 
 
@@ -10,17 +11,19 @@
         <div class="col-xs-12 col-md-8 pull-right head-match-image">
             <div class="match-image" style="background-image:url(http://cdn.sportige.com/wp-content/uploads/2010/10/Rui-Costa-Materazzi.jpg)"></div>
         </div>
-        <div class="col-xs-12 col-md-4 pull-left head-match-info">
-            <div class="match-info">
-                <div class="match-info-channel">
-                    <small></small>
-                    beIN Sports 2
+        @if (spotItem != null)
+        {
+            <div class="col-xs-12 col-md-4 pull-left head-match-info">
+                <div class="match-info">
+                    <div class="match-info-channel">
+                        <small></small>
+                        @spotItem.Channel
+                    </div>
+                    <div class="match-info-teams">@spotItem.Name</div>
                 </div>
-                <div class="match-info-teams">GALATASARAY - BEŞİKTAŞ</div>
-                <div class="match-info-place">Türk Telekom Arena Stadyumu</div>
-                <div class="match-info-date">27 Şubat Pazartesi, 20:00</div>
             </div>
-        </div>
+        }
+        
 
     </div>
     <div class="row row-content">
