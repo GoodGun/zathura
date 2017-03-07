@@ -1,4 +1,12 @@
-﻿<div class="league-table">
+﻿@{
+    var ratingTable = ViewBag.RatingTable as string;
+}
+
+@if (!string.IsNullOrEmpty(ratingTable))
+{<div class="league-table">
+    @Html.Raw(ratingTable)</div>
+}
+@*<div class="league-table">
     <div class="league-table-wrapper">
         <div class="box-title">
             <span>PUAN DURUMU</span>
@@ -187,7 +195,7 @@
             </tbody>
         </table>
     </div>
-</div>
+</div>*@
 
 
 <script type="text/javascript">
