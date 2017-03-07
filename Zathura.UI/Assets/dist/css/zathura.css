@@ -1151,7 +1151,7 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 .match-list-item-channel{color:#00b551;display:block;font:500 14px/18px Montserrat}
 @media (min-width:992px){.match-list-item-channel{font-size:16px;line-height:22px}
 }
-.adv-content{background:#fff;border:1px solid #e5e5e5;margin-bottom:30px;padding:4px;text-align:center}
+.adv-content{background:#fff;border:1px solid #e5e5e5;margin-bottom:30px;padding:9px 4px;text-align:center}
 .adv-content img{display:block;margin:0 auto}
 .league-table{background:#f6fff0;border:1px solid #ccc;margin-bottom:20px;padding:14px;position:relative}
 .league-table-wrapper{position:relative}
@@ -1190,4 +1190,4 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 @-moz-document url-prefix(){.league-table .leagueTableExpander{bottom:187px}
 }
 .league-table .league-table-link{float:right;font:700 14px/18px Montserrat;text-shadow:0 0 1px #fff}
-footer{background:#f4f4f4;border-top:1px solid #00b551;padding:20px}
+footer{background:#f4f4f4;border-top:1px solid #00b551;padding:20px 15px}
