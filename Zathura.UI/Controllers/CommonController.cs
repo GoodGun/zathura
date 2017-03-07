@@ -18,5 +18,11 @@ namespace Zathura.UI.Controllers
             ViewBag.MenuItems = menu;
             return PartialView("_Menu");
         }
+
+        [ChildActionOnly]
+        public ActionResult Rating()
+        {
+            return PartialView("_Rating");
+        }
     }
 }
