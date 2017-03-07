@@ -1153,11 +1153,11 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 }
 .adv-content{background:#fff;border:1px solid #e5e5e5;margin-bottom:30px;padding:4px;text-align:center}
 .adv-content img{display:block;margin:0 auto}
-.league-table{background:#fff;border:1px solid #ccc;-webkit-border-radius:8px;-ms-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;border-radius:8px;margin-bottom:36px;padding:14px 14px 28px;position:relative}
+.league-table{background:#f6fff0;border:1px solid #ccc;margin-bottom:20px;padding:14px;position:relative}
 .league-table-wrapper{position:relative}
 .league-table .box-title{margin-bottom:15px;position:relative}
-.league-table .box-title span{background:#fff;font-size:20px;font-weight:400;line-height:20px;padding-right:10px;position:relative;z-index:1}
-.league-table .box-title:after{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABPlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtMVaHAAAAaXRSTlMAAQMGCAkLDA4QERIUFhkbHiEjJCUmJygpKywuMDEzNTc5Ozw/QUNFR0lLTVBSVFZZW15gaHN/jJeirba4ur6/wsbIyc3Q09fa3N7f4OLj5OXm5+jq6+zt7u/w8fLz9PX29/j5+vv8/f4i0cleAAAA8klEQVQoz1XRx1oCQRBF4VZBTAQdASMi5ow5YUIRxcDY5owYxnr/F3Bn1+nd+f5a9TWFkPl/XZXaecpl2opR6l2K7YFaA/WT0Gt17FXlwoPe9LrsrspZJ/S2D3qagN71K/XlJA69H3CZ9KUcgz4MQo+j0MeMy9SVlDqgT0PQo3bocxZ62Ap9GUYetCBfc+orrexHoG8jLkNGdpuh76NKC2YnTB3TikHTVmrj0F8D/ZiAygq0PkldpU5R16Cf09R16NcMdYM6S91s0Po9R91qhM5Tt5u0/ixQ98LQPLUY0RosUkttetBgiVqO6kGDZWolrvIPibxLcPDIcD0AAAAASUVORK5CYII=);background-repeat:repeat-x;background-size:8px 8px;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
+.league-table .box-title span{background:#f6fff0;font-size:20px;font-weight:400;line-height:20px;padding-right:10px;position:relative;z-index:1}
+.league-table .box-title:after{background:#ccc;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
 .league-table .league-title{color:#999;font-size:12px;line-height:14px;margin-bottom:15px}
 .league-table table thead{border-bottom:2px solid #ccc}
 .league-table table thead tr th{color:#999;font:400 12px/15px Montserrat;padding-bottom:3px;text-align:center;width:9%}
@@ -1179,14 +1179,14 @@ body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat
 .league-table table tbody tr td .fa{float:right;font-size:18px;line-height:17px;margin-right:10px}
 .league-table table tbody tr td .fa-caret-up{color:#279800}
 .league-table table tbody tr td .fa-caret-down{color:#980020}
-.league-table table tbody tr td .fa-stop{color:#e6c10a;font-size:10px;margin-right:11px}
+.league-table table tbody tr td .fa-circle{color:#b2aaef;font-size:12px;margin-right:11px}
 .league-table table tbody tr td .team-name{display:-webkit-box;display:-moz-box;height:18px;line-height:18px;overflow:hidden;-moz-box-orient:vertical;-webkit-box-orient:vertical;-webkit-line-clamp:1}
 .league-table table tbody tr:first-child{border:none}
 .league-table table.showAllTeams .leagueTableExpander{display:none}
 .league-table table.showAllTeams tbody tr{display:table-row!important}
-.league-table .leagueTableExpander{background:#fff;bottom:167px;cursor:pointer;height:31px;left:0;position:absolute;width:100%}
-.league-table .leagueTableExpander:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABPlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtMVaHAAAAaXRSTlMAAQMGCAkLDA4QERIUFhkbHiEjJCUmJygpKywuMDEzNTc5Ozw/QUNFR0lLTVBSVFZZW15gaHN/jJeirba4ur6/wsbIyc3Q09fa3N7f4OLj5OXm5+jq6+zt7u/w8fLz9PX29/j5+vv8/f4i0cleAAAA8klEQVQoz1XRx1oCQRBF4VZBTAQdASMi5ow5YUIRxcDY5owYxnr/F3Bn1+nd+f5a9TWFkPl/XZXaecpl2opR6l2K7YFaA/WT0Gt17FXlwoPe9LrsrspZJ/S2D3qagN71K/XlJA69H3CZ9KUcgz4MQo+j0MeMy9SVlDqgT0PQo3bocxZ62Ap9GUYetCBfc+orrexHoG8jLkNGdpuh76NKC2YnTB3TikHTVmrj0F8D/ZiAygq0PkldpU5R16Cf09R16NcMdYM6S91s0Po9R91qhM5Tt5u0/ixQ98LQPLUY0RosUkttetBgiVqO6kGDZWolrvIPibxLcPDIcD0AAAAASUVORK5CYII=);background-repeat:repeat;background-size:8px 8px;content:"";height:100%;left:0;opacity:.2;position:absolute;top:0;width:100%;z-index:5}
-.league-table .leagueTableExpander span{color:#0a6de6;font:700 14px/30px Montserrat;height:100%;left:0;max-width:100%;position:absolute;top:0;width:100%;z-index:6}
+.league-table .leagueTableExpander{background:#f6fff0;bottom:167px;cursor:pointer;height:31px;left:0;position:absolute;width:100%}
+.league-table .leagueTableExpander:before{background:#ccc;content:"";height:100%;left:0;opacity:.2;position:absolute;top:0;width:100%;z-index:5}
+.league-table .leagueTableExpander span{color:#00b551;font:700 14px/30px Montserrat;height:100%;left:0;max-width:100%;position:absolute;top:0;width:100%;z-index:6}
 @-moz-document url-prefix(){.league-table .leagueTableExpander{bottom:187px}
 }
 .league-table .league-table-link{float:right;font:700 14px/18px Montserrat;text-shadow:0 0 1px #fff}

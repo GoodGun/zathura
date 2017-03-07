@@ -342,11 +342,10 @@ body{
 }
 
 .league-table {
-    background:$color-white;
+  background:$color-sugar-cane;
   border: 1px solid $color-silver;
-  @include vendor-prefix(border-radius,8px);
-  margin-bottom: 36px;
-  padding: 14px 14px 28px;
+  margin-bottom: 20px;
+  padding: 14px;
   position: relative;
 
   &-wrapper {
@@ -358,7 +357,7 @@ body{
     position: relative;
 
     span {
-      background: $color-white;
+      background: $color-sugar-cane;
       font-size: 20px;
       font-weight: 400;
       line-height: 20px;
@@ -368,9 +367,7 @@ body{
     }
 
     &:after {
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABPlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtMVaHAAAAaXRSTlMAAQMGCAkLDA4QERIUFhkbHiEjJCUmJygpKywuMDEzNTc5Ozw/QUNFR0lLTVBSVFZZW15gaHN/jJeirba4ur6/wsbIyc3Q09fa3N7f4OLj5OXm5+jq6+zt7u/w8fLz9PX29/j5+vv8/f4i0cleAAAA8klEQVQoz1XRx1oCQRBF4VZBTAQdASMi5ow5YUIRxcDY5owYxnr/F3Bn1+nd+f5a9TWFkPl/XZXaecpl2opR6l2K7YFaA/WT0Gt17FXlwoPe9LrsrspZJ/S2D3qagN71K/XlJA69H3CZ9KUcgz4MQo+j0MeMy9SVlDqgT0PQo3bocxZ62Ap9GUYetCBfc+orrexHoG8jLkNGdpuh76NKC2YnTB3TikHTVmrj0F8D/ZiAygq0PkldpU5R16Cf09R16NcMdYM6S91s0Po9R91qhM5Tt5u0/ixQ98LQPLUY0RosUkttetBgiVqO6kGDZWolrvIPibxLcPDIcD0AAAAASUVORK5CYII=);
-      background-repeat:repeat-x;
-      background-size: 8px 8px;
+      background:$color-silver;
       content: "";
       height: 8px;
       left: 0;
@@ -518,9 +515,9 @@ body{
             color: $color-carmine;
           }
 
-          .fa-stop {
-            color: $color-corn;
-            font-size: 10px;
+          .fa-circle {
+            color: $color-biloba-flower;
+            font-size: 12px;
             margin-right: 11px;
           }
 
@@ -556,7 +553,7 @@ body{
   }
 
   .leagueTableExpander {
-    background: $color-white;
+    background: $color-sugar-cane;
     bottom: 167px;
     cursor: pointer;
     height: 31px;
@@ -565,9 +562,7 @@ body{
     width: 100%;
 
     &:before {
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABPlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtMVaHAAAAaXRSTlMAAQMGCAkLDA4QERIUFhkbHiEjJCUmJygpKywuMDEzNTc5Ozw/QUNFR0lLTVBSVFZZW15gaHN/jJeirba4ur6/wsbIyc3Q09fa3N7f4OLj5OXm5+jq6+zt7u/w8fLz9PX29/j5+vv8/f4i0cleAAAA8klEQVQoz1XRx1oCQRBF4VZBTAQdASMi5ow5YUIRxcDY5owYxnr/F3Bn1+nd+f5a9TWFkPl/XZXaecpl2opR6l2K7YFaA/WT0Gt17FXlwoPe9LrsrspZJ/S2D3qagN71K/XlJA69H3CZ9KUcgz4MQo+j0MeMy9SVlDqgT0PQo3bocxZ62Ap9GUYetCBfc+orrexHoG8jLkNGdpuh76NKC2YnTB3TikHTVmrj0F8D/ZiAygq0PkldpU5R16Cf09R16NcMdYM6S91s0Po9R91qhM5Tt5u0/ixQ98LQPLUY0RosUkttetBgiVqO6kGDZWolrvIPibxLcPDIcD0AAAAASUVORK5CYII=);
-      background-repeat:repeat;
-      background-size: 8px 8px;
+      background:$color-silver;
       content: "";
       height: 100%;
       left: 0;
@@ -579,7 +574,7 @@ body{
     }
 
     span {
-      color: $color-blue-ribbon;
+      color: $color-spor;
       font: 700 14px/30px "Montserrat";
       height: 100%;
       left: 0;
