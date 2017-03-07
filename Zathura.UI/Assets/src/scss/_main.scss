@@ -114,6 +114,14 @@ body{
     }
 }
 
+.main-text{
+    float:right;
+    color:$color-white;
+    font-size:16px;
+    line-height:30px;
+    padding:15px; 
+}
+
 .search{
     background:#ddd;
     float:right;
@@ -324,6 +332,7 @@ body{
 .adv-content{
     background:$color-white;
     border:1px solid $color-mercury;
+    margin-bottom:30px;
     padding:4px;
     text-align:center;
     img{
@@ -332,3 +341,261 @@ body{
     }
 }
 
+.league-table {
+    background:$color-white;
+  border: 1px solid $color-silver;
+  @include vendor-prefix(border-radius,8px);
+  margin-bottom: 36px;
+  padding: 14px 14px 28px;
+  position: relative;
+
+  &-wrapper {
+    position: relative;
+  }
+
+  .box-title {
+    margin-bottom: 15px;
+    position: relative;
+
+    span {
+      background: $color-white;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      padding-right: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      background: url(http://tests.hurriyet.com.tr/branches/SPOR/img/spor/pattern.png) repeat-x;
+      background-size: 8px 8px;
+      content: "";
+      height: 8px;
+      left: 0;
+      position: absolute;
+      top: 5px;
+      width: 100%;
+    }
+  }
+
+  .league-title {
+    color: $color-dusty-gray;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 15px;
+  }
+
+  table {
+    thead {
+      border-bottom: 2px solid $color-silver;
+
+      tr {
+        th {
+          color: $color-dusty-gray;
+          font: 400 12px/15px "Montserrat";
+          padding-bottom: 3px;
+          text-align: center;
+          width: 9%;
+
+          &:nth-child(5n+1) {
+            padding-right: 2%;
+            width: 15%;
+          }
+
+          &:nth-child(5n+2) {
+            padding-left: 0;
+            text-align: left;
+            width: 61%;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid $color-silver;
+        display: none;
+
+        td {
+          color: $color-dusty-gray;
+          font-size: 14px;
+          line-height: 16px;
+          max-height: 30px;
+          padding: 6px 0;
+          position: relative;
+          text-align: center;
+          width: 9%;
+
+          &:nth-child(5n+1) {
+            width: 17%;
+            .hint {
+              background: $color-white;
+              @include vendor-prefix(border-radius,8px);
+              box-shadow: 0 2px 4px 0 $color-silver;
+              display: none;
+              height: 70px;
+              left: -4px;
+              overflow: inherit;
+              padding: 15px 10px;
+              position: absolute;
+              text-align: center;
+              top: 31px;
+              width: 98px;
+              z-index: 9;
+
+              &:before {
+                border-bottom: 8px solid $color-wildsand;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                content: "";
+                display: block;
+                height: 0;
+                left: 9px;
+                position: absolute;
+                top: -8px;
+                width: 0;
+              }
+
+              .text {
+                color: $color-dusty-gray;
+                display: block;
+                font-size: 12px;
+                height: 14px;
+                line-height: 14px;
+                margin-bottom: 8px;
+              }
+
+              .value {
+                text-align: center;
+
+                small {
+                  font: 400 16px/18px "Montserrat";
+                }
+
+                i {
+                  float: none;
+                  margin: 0;
+                }
+              }
+            }
+
+            @include media(web) {
+              &:hover {
+                .hint {
+                  display: block;
+                }
+              }
+            }
+          }
+
+          &:nth-child(5n+2) {
+            color: $color-black;
+            padding-left: 0;
+            position: relative;
+            text-align: left;
+            width: 61%;
+
+          }
+
+          &:last-child {
+            border-top: none;
+          }
+
+          .fa {
+            float: right;
+            font-size: 18px;
+            line-height: 17px;
+            margin-right: 10px;
+          }
+
+          .fa-caret-up {
+            color: $color-japanese-laurel;
+          }
+
+          .fa-caret-down {
+            color: $color-carmine;
+          }
+
+          .fa-stop {
+            color: $color-corn;
+            font-size: 10px;
+            margin-right: 11px;
+          }
+
+          .team-name {
+            display: -webkit-box;
+            display: -moz-box;
+            height: 18px;
+            line-height: 18px;
+            overflow: hidden;
+            -moz-box-orient: vertical;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+          }
+        }
+
+        &:first-child {
+          border: none;
+        }
+      }
+    }
+
+    &.showAllTeams {
+      .leagueTableExpander {
+        display: none;
+      }
+
+      tbody {
+        tr {
+          display: table-row !important;
+        }
+      }
+    }
+  }
+
+  .leagueTableExpander {
+    background: $color-white;
+    bottom: 167px;
+    cursor: pointer;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    &:before {
+      background: $color-white url(http://tests.hurriyet.com.tr/branches/SPOR/img/spor/pattern.png) repeat;
+      background-size: 8px 8px;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: .2;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 5;
+    }
+
+    span {
+      color: $color-blue-ribbon;
+      font: 700 14px/30px "Montserrat";
+      height: 100%;
+      left: 0;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 6;
+    }
+
+    @include browser(firefox) {
+      bottom: 187px;
+    }
+  }
+
+  .league-table-link {
+    float: right;
+    font: 700 14px/18px "Montserrat";
+    text-shadow: 0 0 1px $color-white;
+  }
+}

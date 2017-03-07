@@ -55,7 +55,7 @@ a,mark{color:#000}
 .fa-th:before{content:"\f00a"}
 .fa-th-list:before{content:"\f00b"}
 .fa-check:before{content:"\f00c"}
-.fa-close:before,.fa-remove:before,.fa-times:before,.row-header .mobile-menu-trigger.opened i:before{content:"\f00d"}
+.fa-close:before,.fa-remove:before,.fa-times:before{content:"\f00d"}
 .fa-search-plus:before{content:"\f00e"}
 .fa-search-minus:before{content:"\f010"}
 .fa-power-off:before{content:"\f011"}
@@ -773,6 +773,7 @@ input{line-height:normal}
 input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
 input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
+*,.search-input .input-text,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 legend{border:0;padding:0}
@@ -797,7 +798,7 @@ h2,h3{page-break-after:avoid}
 .table-bordered td,.table-bordered th{border:1px solid #ddd!important}
 }
 .clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{content:" ";display:table}
-*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+*,:after,:before{box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:transparent}
 body{margin:0;font-size:14px;color:#333}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -1093,6 +1094,7 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .row-header .logo img{max-height:50px}
 .row-header .mobile-menu-trigger{float:right;margin:5px 0}
 .row-header .mobile-menu-trigger i{font-size:30px;margin:5px}
+.row-header .mobile-menu-trigger.opened i:before{content:"\f00d"}
 .row-menu{margin-bottom:20px;min-height:40px}
 .menu{-webkit-border-radius:4px;-ms-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;border-radius:4px;position:relative}
 .menu-wrapper{height:100%;left:0;position:fixed;top:0;width:1px;z-index:999}
@@ -1103,32 +1105,34 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .menu-wrapper{height:auto;left:inherit;position:relative;top:inherit;width:100%}
 }
 .menu-list{left:-100vw;height:100%;position:relative;transition:left .5s;width:80vw;z-index:12}
+.search,.search-trigger{position:absolute;right:0}
 .menu-list.opened{left:0}
 @media (min-width:992px){.menu-list{left:inherit;height:auto;width:auto}
 }
 .menu-list-item{width:100%;float:left;padding:5px 15px}
-.search,.search-trigger{float:right;position:absolute;right:0}
 @media (min-width:992px){.menu-list-item{padding:15px;width:auto}
 .menu-list-item:first-child{display:none}
 }
 .menu-list-item:first-child img{max-height:50px}
 .menu-list-item a{border-bottom:2px solid transparent;color:#fff;display:block;font-weight:700;line-height:24px;padding:3px 3px 1px}
-.search{background:#ddd;top:0;width:100%;z-index:11}
+.main-text{float:right;color:#fff;font-size:16px;line-height:30px;padding:15px}
+.search{background:#ddd;float:right;top:0;width:100%;z-index:11}
 @media (min-width:992px){.menu-list-item a:hover{border-bottom:2px solid #fff}
 .search{background:0 0}
 }
-.search-trigger{background:#00b551;cursor:pointer;display:block;height:32px;margin:4px;width:32px;z-index:9}
-.search-trigger i.fa-close,.search.opened .search-trigger i.fa-search{display:none}
+.search-trigger{background:#00b551;cursor:pointer;display:block;float:right;height:32px;margin:4px;width:32px;z-index:9}
 @media (min-width:992px){.search-trigger{background:0 0;margin:14px;position:relative}
 }
 .search-trigger i{color:#fff;font-size:16px;margin:8px}
+.search-trigger i.fa-close{display:none}
 .search-input{float:left;width:100%}
 @media (min-width:992px){.search-input{float:right;width:30%}
 }
-.search-input .input-text{border:0;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;float:right;font-size:20px;height:40px;margin:0;padding:0 30px;text-align:center;-webkit-transtion:all .3s linear;-ms-transtion:all .3s linear;-moz-transtion:all .3s linear;-o-transtion:all .3s linear;transtion:all .3s linear;visibility:visible;width:100%}
+.search-input .input-text{border:0;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;float:right;font-size:20px;height:40px;margin:0;padding:0 30px;text-align:center;-webkit-transtion:all .3s linear;-ms-transtion:all .3s linear;-moz-transtion:all .3s linear;-o-transtion:all .3s linear;transtion:all .3s linear;visibility:visible;width:100%}
 @media (min-width:992px){.search-input .input-text{-webkit-border-radius:5px 0 0 5px;-ms-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;margin:10px 0;visibility:hidden;width:0}
 }
 .search.opened{z-index:13}
+.search.opened .search-trigger i.fa-search{display:none}
 .search.opened .search-trigger i.fa-close{display:block}
 .search.opened .search-input .input-text{visibility:visible;width:100%}
 .row-head-match{margin-bottom:20px}
@@ -1156,5 +1160,42 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .match-list-item-channel{color:#00b551;display:block;font:500 14px/18px Montserrat}
 @media (min-width:992px){.match-list-item-channel{font-size:16px;line-height:22px}
 }
-.adv-content{background:#fff;border:1px solid #e5e5e5;padding:4px;text-align:center}
+.adv-content{background:#fff;border:1px solid #e5e5e5;margin-bottom:30px;padding:4px;text-align:center}
 .adv-content img{display:block;margin:0 auto}
+.league-table{background:#fff;border:1px solid #ccc;-webkit-border-radius:8px;-ms-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;border-radius:8px;margin-bottom:36px;padding:14px 14px 28px;position:relative}
+.league-table-wrapper{position:relative}
+.league-table .box-title{margin-bottom:15px;position:relative}
+.league-table .box-title span{background:#fff;font-size:20px;font-weight:400;line-height:20px;padding-right:10px;position:relative;z-index:1}
+.league-table .box-title:after{background:url(http://tests.hurriyet.com.tr/branches/SPOR/img/spor/pattern.png) repeat-x;background-size:8px 8px;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
+.league-table .league-title{color:#999;font-size:12px;line-height:14px;margin-bottom:15px}
+.league-table table thead{border-bottom:2px solid #ccc}
+.league-table table thead tr th{color:#999;font:400 12px/15px Montserrat;padding-bottom:3px;text-align:center;width:9%}
+.league-table table thead tr th:nth-child(5n+1){padding-right:2%;width:15%}
+.league-table table thead tr th:nth-child(5n+2){padding-left:0;text-align:left;width:61%}
+.league-table table tbody tr{border-top:1px solid #ccc;display:none}
+.league-table table tbody tr td{color:#999;font-size:14px;line-height:16px;max-height:30px;padding:6px 0;position:relative;text-align:center;width:9%}
+.league-table table tbody tr td:nth-child(5n+1){width:17%}
+.league-table table tbody tr td:nth-child(5n+1) .hint{background:#fff;-webkit-border-radius:8px;-ms-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;border-radius:8px;box-shadow:0 2px 4px 0 #ccc;display:none;height:70px;left:-4px;overflow:inherit;padding:15px 10px;position:absolute;text-align:center;top:31px;width:98px;z-index:9}
+.league-table table tbody tr td:nth-child(5n+1) .hint:before{border-bottom:8px solid #f4f4f4;border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:block;height:0;left:9px;position:absolute;top:-8px;width:0}
+.league-table table tbody tr td:nth-child(5n+1) .hint .text{color:#999;display:block;font-size:12px;height:14px;line-height:14px;margin-bottom:8px}
+.league-table table tbody tr td:nth-child(5n+1) .hint .value{text-align:center}
+.league-table table tbody tr td:nth-child(5n+1) .hint .value small{font:400 16px/18px Montserrat}
+.league-table table tbody tr td:nth-child(5n+1) .hint .value i{float:none;margin:0}
+@media (min-width:992px){.league-table table tbody tr td:nth-child(5n+1):hover .hint{display:block}
+}
+.league-table table tbody tr td:nth-child(5n+2){color:#000;padding-left:0;position:relative;text-align:left;width:61%}
+.league-table table tbody tr td:last-child{border-top:none}
+.league-table table tbody tr td .fa{float:right;font-size:18px;line-height:17px;margin-right:10px}
+.league-table table tbody tr td .fa-caret-up{color:#279800}
+.league-table table tbody tr td .fa-caret-down{color:#980020}
+.league-table table tbody tr td .fa-stop{color:#e6c10a;font-size:10px;margin-right:11px}
+.league-table table tbody tr td .team-name{display:-webkit-box;display:-moz-box;height:18px;line-height:18px;overflow:hidden;-moz-box-orient:vertical;-webkit-box-orient:vertical;-webkit-line-clamp:1}
+.league-table table tbody tr:first-child{border:none}
+.league-table table.showAllTeams .leagueTableExpander{display:none}
+.league-table table.showAllTeams tbody tr{display:table-row!important}
+.league-table .leagueTableExpander{background:#fff;bottom:167px;cursor:pointer;height:31px;left:0;position:absolute;width:100%}
+.league-table .leagueTableExpander:before{background:url(http://tests.hurriyet.com.tr/branches/SPOR/img/spor/pattern.png) #fff;background-size:8px 8px;content:"";height:100%;left:0;opacity:.2;position:absolute;top:0;width:100%;z-index:5}
+.league-table .leagueTableExpander span{color:#0a6de6;font:700 14px/30px Montserrat;height:100%;left:0;max-width:100%;position:absolute;top:0;width:100%;z-index:6}
+@-moz-document url-prefix(){.league-table .leagueTableExpander{bottom:187px}
+}
+.league-table .league-table-link{float:right;font:700 14px/18px Montserrat;text-shadow:0 0 1px #fff}

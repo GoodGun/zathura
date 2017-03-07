@@ -30,53 +30,5 @@
     "Url": "#",
     "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
 
-  },
-  {
-
-    "Id": 5,
-    "Name": "Hentbol",
-    "Url": "#",
-    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
-
-  },
-  {
-
-    "Id": 6,
-    "Name": "Yüzme",
-    "Url": "#",
-    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
-
-  },
-  {
-
-    "Id": 7,
-    "Name": "Boks",
-    "Url": "#",
-    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
-
-  },
-  {
-
-    "Id": 8,
-    "Name": "Bisiklet",
-    "Url": "#",
-    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
-
-  },
-  {
-
-    "Id": 9,
-    "Name": "Olimpiyat",
-    "Url": "#",
-    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
-
-  },
-  {
-
-    "Id": 10,
-    "Name": "Diğer",
-    "Url": "#",
-    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
-
   }
 ]
