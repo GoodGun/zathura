@@ -5,63 +5,7 @@
 }
 
 <div class="container">
-    <div class="row row-header">
-        <div class="col-xs-12">
-            <a href="javascript:;" title="" class="logo">
-                <img src="~/Assets/dist/img/bugunun-maclari-logo.png" alt="Bugünün Maçları" />
-            </a>
-            <span class="mobile-menu-trigger"><i class="fa fa-navicon"></i></span>
-        </div>
-    </div>
-    <div class="row row-menu">
-        <div class="col-xs-12">
-            <div class="menu cf">
-                <div class="menu-wrapper">
-                    <ul class="menu-list">
-                        <li class="menu-list-item logo">
-                            <a href="javascript:;" title=""><img src="~/Assets/dist/img/bugunun-maclari-logo-white.png" alt="" /></a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Futbol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Basketbol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Voleybol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Tenis</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Hentbol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Yüzme</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Boks</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Bisiklet</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Olimpiyat</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Diğer</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="search">
-                    <span class="search-trigger"><i class="fa fa-search"></i><i class="fa fa-close"></i></span>
-                    <span class="search-input">
-                        <input type="search" placeholder="maç ara..." class="input-text" alt="" />
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="row row-head-match">
         <div class="col-xs-12 col-md-8 pull-right head-match-image">
             <div class="match-image" style="background-image:url(http://cdn.sportige.com/wp-content/uploads/2010/10/Rui-Costa-Materazzi.jpg)"></div>
@@ -77,74 +21,12 @@
                 <div class="match-info-date">27 Şubat Pazartesi, 20:00</div>
             </div>
         </div>
-        
+
     </div>
     <div class="row row-content">
-        <div class="col-xs-12 col-md-8 col-content">
-            <div class="match-list">
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-                <div class="match-list-item">
-                    <div class="match-list-item-time">06:30</div>
-                    <div class="match-list-item-info">
-                        <div class="match-list-item-name">GS Warriors - Brooklyn Nets</div>
-                        <div class="match-list-item-channel">Bilyoner.com</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-4 col-sidebar">
-            <div class="adv-content">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97250&w=300&h=250" alt="" />
-            </div>
-        </div>
+        @Html.Partial("_Content")
+
+        @Html.Partial("_RightSidebar")
     </div>
 </div>
 

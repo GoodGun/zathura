@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -9,8 +8,13 @@
     <link rel="stylesheet" href="~/Assets/dist/css/zathura.css" />
 </head>
 <body>
+<div class="container">
+    
+    @Html.Partial("_Header")
 
-        @RenderBody()
+    @{ Html.RenderAction("Menu", "Common"); }
 
+    @RenderBody()
+</div>
 </body>
 </html>

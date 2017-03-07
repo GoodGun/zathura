@@ -1,0 +1,82 @@
+﻿[
+  {
+
+    "Id": 1,
+    "Name": "Futbol",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 2,
+    "Name": "Basketbol",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 3,
+    "Name": "Voleybol",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 4,
+    "Name": "Tenis",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 5,
+    "Name": "Hentbol",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 6,
+    "Name": "Yüzme",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 7,
+    "Name": "Boks",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 8,
+    "Name": "Bisiklet",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 9,
+    "Name": "Olimpiyat",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  },
+  {
+
+    "Id": 10,
+    "Name": "Diğer",
+    "Url": "#",
+    "ScrapeUrl": "http://www.mackolik.com/Canli-Sonuclar"
+
+  }
+]

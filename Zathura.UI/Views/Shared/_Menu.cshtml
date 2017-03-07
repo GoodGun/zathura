@@ -1,0 +1,33 @@
+﻿@using Zathura.UI.Models
+@{
+    var menuItems = ViewBag.MenuItems as List<MenuItem>;
+    string a = string.Empty;
+}
+<div class="row row-menu">
+    <div class="col-xs-12">
+        <div class="menu cf">
+            <div class="menu-wrapper">
+                <ul class="menu-list">
+                    <li class="menu-list-item logo">
+                        <a href="@Url.Action("Index","Home")" title=""><img src="~/Assets/dist/img/bugunun-maclari-logo-white.png" alt="" /></a>
+                    </li>
+                    @if (menuItems != null && menuItems.Any())
+                    {
+                        foreach (var item in menuItems)
+                        {
+                            <li class="menu-list-item">
+                                <a href="@item.Url" title="">@item.Name</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="search">
+                <span class="search-trigger"><i class="fa fa-search"></i><i class="fa fa-close"></i></span>
+                <span class="search-input">
+                    <input type="search" placeholder="maç ara..." class="input-text" alt="" />
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
