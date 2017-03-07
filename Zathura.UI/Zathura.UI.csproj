@@ -363,6 +363,7 @@
     <Content Include="Views\Shared\_Content.cshtml" />
     <Content Include="App_Data\menu.json" />
     <None Include="Properties\PublishProfiles\bugununmaclari.pubxml" />
+    <Content Include="Views\Shared\_Rating.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
