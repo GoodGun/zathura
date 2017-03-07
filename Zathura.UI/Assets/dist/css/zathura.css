@@ -1,11 +1,17 @@
 /*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 .fa.fa-pull-left,.fa.pull-left{margin-right:.3em}
 .fa,.fa-stack{display:inline-block}
-[role=button],button,hr,input[type=button],input[type=submit],input[type=reset]{box-sizing:content-box}
 .cf:after,.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}
+:focus,a:active,a:hover{outline:0}
 @font-face{font-family:FontAwesome;src:url(../../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(../../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(../../bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(../../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(../../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(../../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
@@ -41,7 +47,6 @@
 .fa-stack-1x{line-height:inherit}
 .fa-stack-2x{font-size:2em}
 .fa-inverse{color:#fff}
-a,mark{color:#000}
 .fa-glass:before{content:"\f000"}
 .fa-music:before{content:"\f001"}
 .fa-search:before{content:"\f002"}
@@ -723,61 +728,32 @@ a,mark{color:#000}
 @font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype')}
 @font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}
 @font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;box-sizing:border-box;font-family:Roboto,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1;margin:0;padding:0;-webkit-tap-highlight-color:transparent;vertical-align:baseline}
-body{max-width:100vw;overflow-x:hidden}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-ol,ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
-.cf:after,.cf:before{content:" ";display:table}
-a{text-decoration:none;background-color:transparent}
-img{background-image:none!important;max-width:100%;border:0}
-input[type=text],td,th{padding:0}
-button,input[type=button],input[type=submit],input[type=reset]{background:0 0;border:0;color:inherit;font:inherit;line-height:normal;outline:0;overflow:visible;padding:0;user-select:none;-webkit-appearance:button}
-:focus,a:active,a:hover{outline:0}
-[role=button]{color:inherit;display:inline-block;text-align:center;text-decoration:none;user-select:none;white-space:pre;cursor:pointer}
-input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{appearance:none;display:none}
-iframe{max-width:100%!important}
-/*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html{touch-action:manipulation;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;touch-action:manipulation}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
+a{background-color:transparent}
 abbr[title]{border-bottom:1px dotted}
-b,optgroup,strong{font-weight:700}
 dfn{font-style:italic}
-h1{font-size:2em;margin:.67em 0}
-mark{background:#ff0}
-small{font-size:80%}
-sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+mark{background:#ff0;color:#000}
+sub,sup{position:relative}
 sup{top:-.5em}
 sub{bottom:-.25em}
+img{border:0}
 svg:not(:root){overflow:hidden}
-figure{margin:1em 40px}
-hr{height:0}
+hr{box-sizing:content-box;height:0}
 pre,textarea{overflow:auto}
-code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
-button{overflow:visible}
 button,select{text-transform:none}
-button,html input[type=button],input[type=submit],input[type=reset]{-webkit-appearance:button;cursor:pointer}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 input{line-height:normal}
 input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
 input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
-*,.search-input .input-text,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
-fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
-legend{border:0;padding:0}
-table{border-collapse:collapse;border-spacing:0}
+optgroup{font-weight:700}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print{blockquote,img,pre,tr{page-break-inside:avoid}
 *,:after,:before{background:0 0!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}
@@ -798,9 +774,8 @@ h2,h3{page-break-after:avoid}
 .table-bordered td,.table-bordered th{border:1px solid #ddd!important}
 }
 .clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{content:" ";display:table}
-*,:after,:before{box-sizing:border-box}
-html{font-size:10px;-webkit-tap-highlight-color:transparent}
-body{margin:0;font-size:14px;color:#333}
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+body{color:#333}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
 .container,.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
@@ -1088,7 +1063,23 @@ td.visible-print,th.visible-print{display:table-cell!important}
 @media print{.visible-print-inline-block{display:inline-block!important}
 .hidden-print{display:none!important}
 }
-body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;box-sizing:border-box;font-family:Roboto,Arial,sans-serif;font-size:14px;font-weight:400;line-height:1;margin:0;padding:0;-webkit-tap-highlight-color:transparent;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+.cf:after,.cf:before{content:" ";display:table}
+table{border-collapse:collapse;border-spacing:0}
+a{color:#000;text-decoration:none}
+img{background-image:none!important;max-width:100%}
+input[type=text]{padding:0}
+[role=button],button,input[type=button],input[type=reset],input[type=submit]{box-sizing:content-box}
+button,input[type=button],input[type=reset],input[type=submit]{background:0 0;border:0;color:inherit;font:inherit;line-height:normal;outline:0;overflow:visible;padding:0;user-select:none;-webkit-appearance:button}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+[role=button]{color:inherit;cursor:default;display:inline-block;text-align:center;text-decoration:none;user-select:none;white-space:pre}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{appearance:none;display:none}
+iframe{max-width:100%!important}
+body{max-width:100vw;overflow-x:hidden;background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .menu,.menu-list{background:#00b551}
 .row-header{padding:10px 0}
 .row-header .logo img{max-height:50px}
@@ -1128,7 +1119,7 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .search-input{float:left;width:100%}
 @media (min-width:992px){.search-input{float:right;width:30%}
 }
-.search-input .input-text{border:0;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;float:right;font-size:20px;height:40px;margin:0;padding:0 30px;text-align:center;-webkit-transtion:all .3s linear;-ms-transtion:all .3s linear;-moz-transtion:all .3s linear;-o-transtion:all .3s linear;transtion:all .3s linear;visibility:visible;width:100%}
+.search-input .input-text{border:0;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;float:right;font-size:20px;height:40px;margin:0;padding:0 30px;text-align:center;-webkit-transtion:all .3s linear;-ms-transtion:all .3s linear;-moz-transtion:all .3s linear;-o-transtion:all .3s linear;transtion:all .3s linear;visibility:visible;width:100%}
 @media (min-width:992px){.search-input .input-text{-webkit-border-radius:5px 0 0 5px;-ms-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;-o-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;margin:10px 0;visibility:hidden;width:0}
 }
 .search.opened{z-index:13}
@@ -1166,7 +1157,7 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .league-table-wrapper{position:relative}
 .league-table .box-title{margin-bottom:15px;position:relative}
 .league-table .box-title span{background:#fff;font-size:20px;font-weight:400;line-height:20px;padding-right:10px;position:relative;z-index:1}
-.league-table .box-title:after{background:url(http://tests.hurriyet.com.tr/branches/SPOR/img/spor/pattern.png) repeat-x;background-size:8px 8px;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
+.league-table .box-title:after{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABPlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtMVaHAAAAaXRSTlMAAQMGCAkLDA4QERIUFhkbHiEjJCUmJygpKywuMDEzNTc5Ozw/QUNFR0lLTVBSVFZZW15gaHN/jJeirba4ur6/wsbIyc3Q09fa3N7f4OLj5OXm5+jq6+zt7u/w8fLz9PX29/j5+vv8/f4i0cleAAAA8klEQVQoz1XRx1oCQRBF4VZBTAQdASMi5ow5YUIRxcDY5owYxnr/F3Bn1+nd+f5a9TWFkPl/XZXaecpl2opR6l2K7YFaA/WT0Gt17FXlwoPe9LrsrspZJ/S2D3qagN71K/XlJA69H3CZ9KUcgz4MQo+j0MeMy9SVlDqgT0PQo3bocxZ62Ap9GUYetCBfc+orrexHoG8jLkNGdpuh76NKC2YnTB3TikHTVmrj0F8D/ZiAygq0PkldpU5R16Cf09R16NcMdYM6S91s0Po9R91qhM5Tt5u0/ixQ98LQPLUY0RosUkttetBgiVqO6kGDZWolrvIPibxLcPDIcD0AAAAASUVORK5CYII=);background-repeat:repeat-x;background-size:8px 8px;content:"";height:8px;left:0;position:absolute;top:5px;width:100%}
 .league-table .league-title{color:#999;font-size:12px;line-height:14px;margin-bottom:15px}
 .league-table table thead{border-bottom:2px solid #ccc}
 .league-table table thead tr th{color:#999;font:400 12px/15px Montserrat;padding-bottom:3px;text-align:center;width:9%}
@@ -1194,7 +1185,7 @@ body{background:#f0f0f0;font-family:Montserrat,Arial,sans-serif}
 .league-table table.showAllTeams .leagueTableExpander{display:none}
 .league-table table.showAllTeams tbody tr{display:table-row!important}
 .league-table .leagueTableExpander{background:#fff;bottom:167px;cursor:pointer;height:31px;left:0;position:absolute;width:100%}
-.league-table .leagueTableExpander:before{background:url(http://tests.hurriyet.com.tr/branches/SPOR/img/spor/pattern.png) #fff;background-size:8px 8px;content:"";height:100%;left:0;opacity:.2;position:absolute;top:0;width:100%;z-index:5}
+.league-table .leagueTableExpander:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABPlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtMVaHAAAAaXRSTlMAAQMGCAkLDA4QERIUFhkbHiEjJCUmJygpKywuMDEzNTc5Ozw/QUNFR0lLTVBSVFZZW15gaHN/jJeirba4ur6/wsbIyc3Q09fa3N7f4OLj5OXm5+jq6+zt7u/w8fLz9PX29/j5+vv8/f4i0cleAAAA8klEQVQoz1XRx1oCQRBF4VZBTAQdASMi5ow5YUIRxcDY5owYxnr/F3Bn1+nd+f5a9TWFkPl/XZXaecpl2opR6l2K7YFaA/WT0Gt17FXlwoPe9LrsrspZJ/S2D3qagN71K/XlJA69H3CZ9KUcgz4MQo+j0MeMy9SVlDqgT0PQo3bocxZ62Ap9GUYetCBfc+orrexHoG8jLkNGdpuh76NKC2YnTB3TikHTVmrj0F8D/ZiAygq0PkldpU5R16Cf09R16NcMdYM6S91s0Po9R91qhM5Tt5u0/ixQ98LQPLUY0RosUkttetBgiVqO6kGDZWolrvIPibxLcPDIcD0AAAAASUVORK5CYII=);background-repeat:repeat;background-size:8px 8px;content:"";height:100%;left:0;opacity:.2;position:absolute;top:0;width:100%;z-index:5}
 .league-table .leagueTableExpander span{color:#0a6de6;font:700 14px/30px Montserrat;height:100%;left:0;max-width:100%;position:absolute;top:0;width:100%;z-index:6}
 @-moz-document url-prefix(){.league-table .leagueTableExpander{bottom:187px}
 }
