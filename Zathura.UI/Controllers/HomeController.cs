@@ -14,20 +14,45 @@ namespace Zathura.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private const string scrapeUrl = "http://www.sporx.com/tvdebugun/";
+        private const string scrapeUrlHome = "http://www.sporx.com/tvdebugun/";
+
+        private const string scrapeUrlLive = "http://www.mackolik.com/Canli-Sonuclar";
         public ActionResult Index()
         {
-            GetPage();
+            GetFilteredPage();
+            return View();
+        }
+
+        public ActionResult Live()
+        {
+            GetLivePage();
             return View();
         }
 
         public ActionResult Filter(string page = "")
         {
-            GetPage(page);
+            GetFilteredPage(page);
             return View("Index");
         }
 
-        private void GetPage(string page = "")
+        private void GetLivePage()
+        {
+            Models.Program spot = null;
+            List<Program> programs = null;
+
+            var web = new HtmlWeb
+            {
+                AutoDetectEncoding = false,
+                OverrideEncoding = Encoding.UTF8
+            };
+            HtmlDocument doc = web.Load(scrapeUrlHome);
+
+            var liveTable = doc.DocumentNode.SelectSingleNode("//div[@id='dvScores']");
+
+            ViewBag.LiveTable = liveTable;
+        }
+
+        private void GetFilteredPage(string page = "")
         {
             Models.Program spot = null;
             List<Program> programs = null;
@@ -37,7 +62,7 @@ namespace Zathura.UI.Controllers
                 AutoDetectEncoding = false,
                 OverrideEncoding = Encoding.GetEncoding("iso-8859-9")
             };
-            HtmlDocument doc = web.Load(scrapeUrl);
+            HtmlDocument doc = web.Load(scrapeUrlHome);
 
             var spotItem = doc.DocumentNode.SelectSingleNode("//div[@class='tvmanset-content active']");
             if (spotItem != null)

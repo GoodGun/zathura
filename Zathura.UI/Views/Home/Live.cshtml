@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Bugünün maçları | Hangi maç hangi kanalda?";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var spotItem = ViewBag.SpotItem as Zathura.UI.Models.Program;
+}
+
+
+
+    <div class="row row-head-match">
+        <div class="col-xs-12 col-md-8 pull-right head-match-image">
+            <div class="match-image" style="background-image:url(http://cdn.sportige.com/wp-content/uploads/2010/10/Rui-Costa-Materazzi.jpg)"></div>
+        </div>
+        @if (spotItem != null)
+        {
+            <div class="col-xs-12 col-md-4 pull-left head-match-info">
+                <div class="match-info">
+                    <div class="match-info-channel">
+                        <small></small>
+                        @spotItem.Channel
+                    </div>
+                    <div class="match-info-teams">@spotItem.Name</div>
+                </div>
+            </div>
+        }
+        
+
+    </div>
+    <div class="row row-content">
+        @Html.Partial("_Live")
+
+        @Html.Partial("_RightSidebar")
+    </div>
+<div class="row">
+    <div class="col-xs-12">
+        <footer>
+            &copy; 2017 - Bugünün maçları 
+        </footer>
+    </div>
+</div>
+
+

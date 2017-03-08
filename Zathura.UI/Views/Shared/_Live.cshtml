@@ -1,0 +1,9 @@
+﻿@{
+    var liveTable = ViewBag.LiveTable as string;
+}
+@if (!string.IsNullOrEmpty(liveTable))
+{
+    <div class="league-table">
+        @Html.Raw(liveTable)
+    </div>
+}

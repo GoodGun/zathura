@@ -391,6 +391,8 @@
     <Content Include="Assets\dist\img\favicon\manifest.json" />
     <None Include="Properties\PublishProfiles\bugununmaclari.pubxml" />
     <Content Include="Views\Shared\_Rating.cshtml" />
+    <Content Include="Views\Home\Live.cshtml" />
+    <Content Include="Views\Shared\_Live.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

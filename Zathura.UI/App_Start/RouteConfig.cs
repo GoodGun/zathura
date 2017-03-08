@@ -38,6 +38,12 @@ namespace Zathura.UI
             );
 
             routes.MapRoute(
+                name: "LiveScore",
+                url: "canli-skor",
+                defaults: new { controller = "Home", action = "Live"}
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
