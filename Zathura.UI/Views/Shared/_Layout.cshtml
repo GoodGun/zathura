@@ -37,13 +37,27 @@
     <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
 </head>
 <body>
+    <!-- Admatic interstitial 320x480 Ad Code START -->
+    <ins data-publisher="adm-pub-140059228868" data-ad-type="interstitial" class="adm-ads-area" data-ad-network="179323559554" data-ad-sid="206" data-ad-width="320" data-ad-height="480"></ins>
+<!-- Admatic interstitial 320x480 Ad Code END -->
+    <!-- Admatic interstitial 800x600 Ad Code START -->
+    <ins data-publisher="adm-pub-140059228868" data-ad-type="interstitial" class="adm-ads-area" data-ad-network="179323559554" data-ad-sid="209" data-ad-width="800" data-ad-height="600"></ins>
+<!-- Admatic interstitial 800x600 Ad Code END -->
 <div class="container">
-    
+
     @Html.Partial("_Header")
 
     @{ Html.RenderAction("Menu", "Common"); }
+    
+    <!-- Admatic masthead 970x250 Ad Code START -->
+    <ins data-publisher="adm-pub-140059228868" data-ad-type="masthead" class="adm-ads-area" data-ad-network="179323559554" data-ad-sid="501" data-ad-width="970" data-ad-height="250"></ins>
+    <!-- Admatic masthead 970x250 Ad Code END -->
 
     @RenderBody()
 </div>
+<!-- Admatic interstitial 320x480 Ad Code START -->
+<ins data-publisher="adm-pub-140059228868" data-ad-type="interstitial" class="adm-ads-area" data-ad-network="179323559554" data-ad-sid="206" data-ad-width="320" data-ad-height="480"></ins>
+<!-- Admatic interstitial 320x480 Ad Code END -->
+<script src="//cdn2.admatic.com.tr/showad/showad.js" async></script>
 </body>
 </html>

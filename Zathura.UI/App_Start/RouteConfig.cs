@@ -38,9 +38,15 @@ namespace Zathura.UI
             );
 
             routes.MapRoute(
-                name: "LiveScore",
-                url: "canli-skor",
-                defaults: new { controller = "Home", action = "Live"}
+                name: "LiveScoreFootball",
+                url: "canli-skor/futbol",
+                defaults: new { controller = "Home", action = "Live" , page = "futbol" }
+            );
+
+            routes.MapRoute(
+                name: "LiveScoreBasketball",
+                url: "canli-skor/basketbol",
+                defaults: new { controller = "Home", action = "Live" , page = "basketbol" }
             );
 
             routes.MapRoute(

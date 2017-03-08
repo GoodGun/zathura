@@ -16,16 +16,16 @@ namespace Zathura.UI.Controllers
     {
         private const string scrapeUrlHome = "http://www.sporx.com/tvdebugun/";
 
-        private const string scrapeUrlLive = "http://www.mackolik.com/Canli-Sonuclar";
+        private const string scrapeUrlLive = "https://www.nesine.com/iddaa/canli-mac-sonuclari/";
         public ActionResult Index()
         {
             GetFilteredPage();
             return View();
         }
 
-        public ActionResult Live()
+        public ActionResult Live(string page= "futbol")
         {
-            GetLivePage();
+            GetLivePage(page);
             return View();
         }
 
@@ -35,7 +35,7 @@ namespace Zathura.UI.Controllers
             return View("Index");
         }
 
-        private void GetLivePage()
+        private void GetLivePage(string page)
         {
             Models.Program spot = null;
             List<Program> programs = null;
@@ -45,9 +45,9 @@ namespace Zathura.UI.Controllers
                 AutoDetectEncoding = false,
                 OverrideEncoding = Encoding.UTF8
             };
-            HtmlDocument doc = web.Load(scrapeUrlHome);
+            HtmlDocument doc = web.Load(scrapeUrlLive+ page);
 
-            var liveTable = doc.DocumentNode.SelectSingleNode("//div[@id='dvScores']");
+            var liveTable = doc.DocumentNode.SelectSingleNode("//div[@id='result-list']");
 
             ViewBag.LiveTable = liveTable;
         }
