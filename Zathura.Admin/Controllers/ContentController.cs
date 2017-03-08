@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Zathura.Admin.CustomFilter;
+using Zathura.Core.Caching;
 using Zathura.Core.Infrastructure;
 using Zathura.Data.Model;
 
@@ -16,13 +17,15 @@ namespace Zathura.Admin.Controllers
         private readonly ICategoryRepository _categoryRepository;
         private readonly IUserRepository _userRepository;
         private readonly IMediaItemRepository _mediaItemRepository;
+        private readonly IMemoryCacheManager _cacheManager;
 
-        public ContentController(IContentRepository contentRepository, ICategoryRepository categoryRepository, IUserRepository userRepository, IMediaItemRepository mediaItemRepository)
+        public ContentController(IContentRepository contentRepository, ICategoryRepository categoryRepository, IUserRepository userRepository, IMediaItemRepository mediaItemRepository, IMemoryCacheManager cacheManager)
         {
             _contentRepository = contentRepository;
             _categoryRepository = categoryRepository;
             _userRepository = userRepository;
             _mediaItemRepository = mediaItemRepository;
+            _cacheManager = cacheManager;
         }
         #endregion
 
@@ -94,7 +97,12 @@ namespace Zathura.Admin.Controllers
 
         public void SetCategoryList(object category = null)
         {
-            var categoryList = _categoryRepository.GetMany(x => x.ParentCategoryId == 0).ToList();
+            if (!_cacheManager.IsSet("CategoriList_"))
+            {
+                _cacheManager.Add("CategoriList_", _categoryRepository.GetMany(x => x.ParentCategoryId == 0).ToList(), 3600);
+            }
+
+            var categoryList = _cacheManager.Get<List<Category>>("CategoriList_");
             ViewBag.CategoryList = categoryList;
         }
 
