@@ -17,18 +17,20 @@ namespace Zathura.UI.Controllers
         private const string scrapeUrlHome = "http://www.sporx.com/tvdebugun/";
 
         private const string scrapeUrlLive = "https://www.nesine.com/iddaa/canli-mac-sonuclari/";
+
+        [OutputCache(Duration = 3600, VaryByParam="none")]
         public ActionResult Index()
         {
             GetFilteredPage();
             return View();
         }
-
+        [OutputCache(Duration = 3600, VaryByParam = "page")]
         public ActionResult Live(string page= "futbol")
         {
             GetLivePage(page);
             return View();
         }
-
+        [OutputCache(Duration = 3600, VaryByParam = "page")]
         public ActionResult Filter(string page = "")
         {
             GetFilteredPage(page);
