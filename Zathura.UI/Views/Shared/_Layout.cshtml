@@ -1,8 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title</title>
+    <meta property="literal-category" content="@ViewBag.Title" />
     <link rel="apple-touch-icon" sizes="57x57" href="~/Assets/dist/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="~/Assets/dist/img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="~/Assets/dist/img/favicon/apple-icon-72x72.png">
@@ -19,10 +22,27 @@
     <link rel="manifest" href="~/Assets/dist/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="~/Assets/dist/img/favicon/ms-icon-144x144.png">
+    
+    <meta property="og:url" content="@Request.Url" />
+    <meta name="twitter:url" content="@Request.Url" />
+    <link rel="canonical" href="@Request.Url" itemprop="url" />
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="~/Assets/dist/img/favicon/apple-icon-180x180.png" />
+    <meta property="og:description" content="@ViewBag.Title maçı hangi kanalda saat kaçta yayınlanacak? bugununmaclari.com ile TV'de canlı spor yayınları ve maç hangi kanalda hemen öğrenin." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="@ViewBag.Title" />
+    <meta name="twitter:description" content="@ViewBag.Title" />
+    <meta name="twitter:image" content="" />
+    <meta name="title" content="@ViewBag.Title" />
+    <meta name="description" content="@ViewBag.Title maçı hangi kanalda saat kaçta yayınlanacak? bugununmaclari.com ile TV'de canlı spor yayınları ve maç hangi kanalda hemen öğrenin." />
+
+
     <meta name="theme-color" content="#ffffff">
     <script src="~/Assets/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="~/Assets/dist/js/zathura.js"></script>
-    <link rel="stylesheet" href="~/Assets/dist/css/zathura.css" />
+    <link rel="stylesheet" href="~/Assets/dist/css/zathura.css"/>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
