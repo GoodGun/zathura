@@ -680,6 +680,10 @@
       <Project>{b418b362-4516-49fd-8090-77b0a48a83bf}</Project>
       <Name>Zathura.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Zathura.Logs\Zathura.Logs.csproj">
+      <Project>{9244d268-a22f-45ea-9d1f-c8354253b50e}</Project>
+      <Name>Zathura.Logs</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
