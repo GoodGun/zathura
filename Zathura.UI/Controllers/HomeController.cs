@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
@@ -18,19 +23,19 @@ namespace Zathura.UI.Controllers
 
         private const string scrapeUrlLive = "https://www.nesine.com/iddaa/canli-mac-sonuclari/";
 
-        [OutputCache(Duration = 3600, VaryByParam="none")]
+        [OutputCache(Duration = 21600, VaryByParam="none")]
         public ActionResult Index()
         {
             GetFilteredPage();
             return View();
         }
-        [OutputCache(Duration = 3600, VaryByParam = "page")]
+        [OutputCache(Duration = 21600, VaryByParam = "page")]
         public ActionResult Live(string page= "futbol")
         {
             GetLivePage(page);
             return View();
         }
-        [OutputCache(Duration = 3600, VaryByParam = "page")]
+        [OutputCache(Duration = 21600, VaryByParam = "page")]
         public ActionResult Filter(string page = "")
         {
             GetFilteredPage(page);
@@ -54,17 +59,52 @@ namespace Zathura.UI.Controllers
             ViewBag.LiveTable = liveTable;
         }
 
+        public void SaveImage(string filename, string url, ImageFormat format)
+        {
+
+            using (WebClient webClient = new WebClient())
+            {
+                byte[] data = webClient.DownloadData(url);
+
+                using (MemoryStream mem = new MemoryStream(data))
+                {
+                    using (var Image = System.Drawing.Image.FromStream(mem))
+                    {
+                        // If you want it as Jpeg
+                        Image.Save(filename, ImageFormat.Png);
+                    }
+                }
+
+            }
+        }
+
         private void GetFilteredPage(string page = "")
         {
             Models.Program spot = null;
             List<Program> programs = null;
-
+            var spotImageUrl = "";
             var web = new HtmlWeb
             {
                 AutoDetectEncoding = false,
                 OverrideEncoding = Encoding.GetEncoding("iso-8859-9")
             };
             HtmlDocument doc = web.Load(scrapeUrlHome);
+
+            var spotImage = doc.DocumentNode.SelectSingleNode("//img[@class='tvmanset-img active']");
+            if (spotImage != null && !string.IsNullOrEmpty(spotImage.OuterHtml))
+            {
+                string imageUrl = "http://www.sporx.com";
+                imageUrl += Regex.Match(spotImage.OuterHtml, "<img.+?src=[\"'](.+?)[\"'].+?>", RegexOptions.IgnoreCase).Groups[1].Value;
+                string savePath = "/External/img/spot/" + DateTime.Now.ToShortDateString() + ".png";
+
+                try
+                {
+                    SaveImage(Server.MapPath(savePath), imageUrl, ImageFormat.Png);
+                    spotImageUrl = savePath;
+
+                }
+                catch (Exception ex){}
+            }
 
             var spotItem = doc.DocumentNode.SelectSingleNode("//div[@class='tvmanset-content active']");
             if (spotItem != null)
@@ -95,7 +135,7 @@ namespace Zathura.UI.Controllers
 
                 }
             }
-
+            ViewBag.SpotImageUrl = spotImageUrl;
             ViewBag.Page = page;
             ViewBag.SpotItem = spot;
             ViewBag.Programs = programs;

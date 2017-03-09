@@ -3,13 +3,15 @@
     ViewBag.Title = "Bugünün maçları | Hangi maç hangi kanalda?";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var spotItem = ViewBag.SpotItem as Zathura.UI.Models.Program;
+
+    var spotImage = ViewBag.SpotImageUrl as string;
 }
 
 
 
     <div class="row row-head-match">
         <div class="col-xs-12 col-md-8 pull-right head-match-image">
-            <div class="match-image" style="background-image:url(http://cdn.sportige.com/wp-content/uploads/2010/10/Rui-Costa-Materazzi.jpg)"></div>
+            <div class="match-image" style="background-image:url(@(!string.IsNullOrEmpty(spotImage) ? spotImage : "http://cdn.sportige.com/wp-content/uploads/2010/10/Rui-Costa-Materazzi.jpg"))"></div>
         </div>
         @if (spotItem != null)
         {

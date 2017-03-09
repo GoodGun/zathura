@@ -402,6 +402,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\src\font\" />
+    <Folder Include="External\img\spot\" />
     <Folder Include="Views\Common\" />
   </ItemGroup>
   <PropertyGroup>
