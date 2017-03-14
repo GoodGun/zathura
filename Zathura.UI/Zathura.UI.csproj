@@ -100,6 +100,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebDriver, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.3.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -125,6 +129,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\packages\PhantomJS.1.9.2\tools\phantomjs\phantomjs.exe">
+      <Link>phantomjs.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\bower_components\bootstrap-sass-grid\css\bootstrap-sass-grid.css" />
     <Content Include="Assets\bower_components\bootstrap-sass-grid\gulpfile.js" />
     <Content Include="Assets\bower_components\bootstrap-sass-grid\index.html" />
@@ -282,6 +290,9 @@
     <Content Include="Global.asax" />
     <Content Include="google25f1c417fc709f04.html" />
     <Content Include="gulpfile.js" />
+    <Content Include="phantomjs-license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="sitemap.xml" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -3,6 +3,7 @@
     ViewBag.Title = "Bugünün maçları | Hangi maç hangi kanalda?";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var spotItem = ViewBag.SpotItem as Zathura.UI.Models.Program;
+    var liveTable = ViewBag.LiveTable;
 }
 
 
@@ -24,7 +25,7 @@
             </div>
         }
         
-
+        @*@liveTable*@
     </div>
     <div class="row row-content">
         @Html.Partial("_Live")

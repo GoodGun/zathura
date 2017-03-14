@@ -12,6 +12,7 @@ using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
+using OpenQA.Selenium.PhantomJS;
 using Zathura.UI.Helper;
 using Zathura.UI.Models;
 
@@ -44,19 +45,40 @@ namespace Zathura.UI.Controllers
 
         private void GetLivePage(string page)
         {
-            Models.Program spot = null;
-            List<Program> programs = null;
 
-            var web = new HtmlWeb
+
+            var driver = new PhantomJSDriver();
+            driver.Url = "http://www.sporx.com/canliskorlar/#sportId=1";
+            driver.Navigate();
+
+            //the driver can now provide you with what you need (it will execute the script)
+            //get the source of the page
+            var source = driver.PageSource;
+            //fully navigate the dom
+            var pathElement = string.Empty;
+            try
             {
-                AutoDetectEncoding = false,
-                OverrideEncoding = Encoding.UTF8
-            };
-            HtmlDocument doc = web.Load(scrapeUrlLive+ page);
+               pathElement = driver.FindElementByXPath("//div[@id='csMatches']").GetAttribute("innerHTML");
+            }
+            catch (Exception e)
+            {
+            }
+             
+            //var pathElement = driver.FindElementById("csMatches");
 
-            var liveTable = doc.DocumentNode.SelectSingleNode("//div[@id='result-list']");
+            //Models.Program spot = null;
+            //List<Program> programs = null;
 
-            ViewBag.LiveTable = liveTable;
+            //var web = new HtmlWeb
+            //{
+            //    AutoDetectEncoding = false,
+            //    OverrideEncoding = Encoding.UTF8
+            //};
+            //HtmlDocument doc = web.Load("http://livescore.ntvspor.net/");
+
+            //var liveTable = doc.DocumentNode.SelectSingleNode("//div[@class='MatchList']");
+
+            ViewBag.LiveTable = pathElement;
         }
 
         public void SaveImage(string filename, string url, ImageFormat format)
