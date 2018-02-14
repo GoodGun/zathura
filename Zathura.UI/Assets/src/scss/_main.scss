@@ -5,7 +5,8 @@
         background: $color-white;
         border-bottom: 1px solid $color-border;
         border-top: 1px solid $color-border;
-        padding: 5px 0;
+        padding-bottom: 5px;
+        padding-top: 5px;
 
         @include media(web) {
             padding: 20px 0;
@@ -42,25 +43,174 @@
     }
 }
 
+.mobile-menu {
+    cursor:pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: $fw-bold;
+    padding: 10px 10px 5px;
+}
+
 .main-menu {
-    float: right;
+    background: $color-gallery;
+    height: 100%;
+    left: 100vw;
+    padding-top: 40px;
+    position: fixed;
+    top: 0;
+    transition: left .1s linear;
+    width: 100%;
+    z-index: 99;
+
+
+    @include media(web) {
+        background: $color-white;
+        float: right;
+        left: 0;
+        padding: 0;
+        position: static;
+    }
 
     &-item {
+        cursor: pointer;
         display: inline-block;
-        padding: 0 5px;
+        padding: 4px 5px 0;
 
         @include media(wide) {
-            padding: 0 10px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         &-link {
-            font-size: 16px;
-            font-weight: $fw-black;
-            line-height: 30px;
             padding: 0 5px;
 
             @include media(wide) {
                 padding: 0 10px;
+            }
+
+            .main-menu-item-wrapper {
+                font-size: 16px;
+                font-weight: $fw-black;
+                line-height: 30px;
+
+                .fa {
+                    font-size: 12px;
+                    position: relative;
+                    right: 0;
+                    top: -2px;
+                }
+            }
+        }
+
+        @include media(web) {
+
+
+            &:hover {
+                background: $color-spanish-white;
+                border-radius: 5px;
+
+                .main-menu-item-wrapper {
+                    color: $color-bourbon;
+                }
+
+                .wide-menu {
+                    display: block;
+                }
+            }
+
+            &.has-submenu {
+                padding-right: 12px;
+
+                &:hover {
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+        }
+    }
+
+    &.opened {
+        left: 0;
+
+
+        .close-menu {
+            background: $color-spanish-white;
+            cursor: pointer;
+            font: $fw-black 16px/36px $font2;
+            height: 36px;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            width: 36px;
+        }
+
+        .main-menu-item {
+            border-top: 1px solid $color-alto;
+            width: 100%;
+
+            &.has-submenu {
+                padding: 0;
+                position: relative;
+            }
+
+            &-link {
+                display: block;
+                padding: 0;
+                width: 100%;
+            }
+
+            &-wrapper {
+                display: block;
+            }
+
+            &:hover {
+                .main-menu-item-link {
+                    color: $color-black;
+                }
+            }
+
+            .wide-menu {
+                background: $color-alto;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                display: none;
+                min-height: unset;
+                padding: 0;
+                position: static;
+                transtion: all .2s linear;
+
+                &.opened {
+                    display: block;
+                }
+
+                .sub-menu-wrapper {
+                    border-bottom: 1px solid $color-silver;
+                    display: block;
+                }
+
+                .sub-menu-title {
+                    display: block;
+                    font-weight: $fw-bold;
+                    padding: 10px 0;
+                }
+
+                .sub-menu {
+                    display: none;
+                    transition: all .2s linear;
+
+                    &.opened {
+                        display: block;
+                    }
+
+                    &-item {
+                        > a {
+                            border-top: 1px solid $color-silver;
+                            display: block;
+                            line-height: 20px;
+                            padding: 5px 0;
+                        }
+                    }
+                }
             }
         }
     }
@@ -68,13 +218,48 @@
 
 .wide-menu {
     background: $color-white;
+    border-radius: 5px;
+    border-top: 3px solid $color-spanish-white;
     box-shadow: $box-shadow;
-    display:none;
     left: 0;
-    min-height: 300px;
     position: absolute;
-    top: 35px;
+    top: 34px;
     width: 100%;
+    z-index: 3;
+
+    @include media(web) {
+        display: none;
+        text-align: left;
+
+        .sub-menu {
+            list-style-type:disc;
+            padding-left:20px;
+            padding-top:10px;
+            width:80%;
+
+            &-wrapper {
+                float: left;
+                padding: 20px;
+                width: 33.33333%;
+            }
+
+            &-title {
+                border-bottom: 1px solid $color-mercury;
+                display: block;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 28px;
+                width: 80%;
+            }
+            &-item{
+                padding:5px 0;
+                a{
+                    line-height:20px;
+                    padding:5px 0;
+                }
+            }
+        }
+    }
 }
 
 
@@ -225,7 +410,7 @@
         }
 
         &-button {
-            background: $color-double-spanish-white;
+            background: $color-spanish-white;
             border-radius: 3px;
             color: $color-oregon;
             font-weight: $fw-black;

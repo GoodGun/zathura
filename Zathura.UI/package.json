@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "zathura framework",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-changed": "^2.0.0",
