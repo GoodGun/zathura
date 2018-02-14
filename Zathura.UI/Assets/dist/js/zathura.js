@@ -1,2 +1,2 @@
 
-$(document).ready(function(){console.log("ersin")});var swiper=new Swiper(".swiper-container",{slidesPerView:1,spaceBetween:30,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});
+$(document).ready(function(){new Swiper(".main-slider",{slidesPerView:1,spaceBetween:30,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},effect:"fade"});console.log("ersin")});
