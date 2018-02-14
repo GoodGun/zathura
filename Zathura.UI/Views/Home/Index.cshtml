@@ -4,61 +4,130 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <div class="row row-header">
-        <div class="col-xs-12">
-            <a href="javascript:;" title="" class="logo">
-                <img src="~/Assets/dist/img/bugunun-maclari-logo.png" alt="Bugünün Maçları" />
-            </a>
-            <span class="mobile-menu-trigger"><i class="fa fa-navicon"></i></span>
+
+<header class="mb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="mini-menu">
+                    <li class="mini-menu-item">
+                        <a class="mini-menu-item-link" href="javascript:;" title="ÜYE GİRİŞİ">ÜYE GİRİŞİ</a>
+                    </li>
+                    <li class="mini-menu-item">
+                        <a class="mini-menu-item-link" href="javascript:;" title="ÜYE OL">ÜYE OL</a>
+                    </li>
+                    <li class="mini-menu-item">
+                        <a class="mini-menu-item-link" href="javascript:;" title="YAYINEVİ EKLE">YAYINEVİ EKLE</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="row row-menu">
-        <div class="col-xs-12">
-            <div class="menu cf">
-                <div class="menu-wrapper">
-                    <ul class="menu-list">
-                        <li class="menu-list-item logo">
-                            <a href="javascript:;" title=""><img src="~/Assets/dist/img/bugunun-maclari-logo-white.png" alt="" /></a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Futbol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Basketbol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Voleybol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Tenis</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Hentbol</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Yüzme</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Boks</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Bisiklet</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Olimpiyat</a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a href="javascript:;" title="">Diğer</a>
-                        </li>
-                    </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row row-menu">
+                    <div class="col-12 col-lg-2">
+                        <a href="/" title="Kitaprazzi Anasayfa">
+                            <img src="dist/img/kitaprazzi-logo.png" />
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-10 col-menu">
+                        <div class="mobile-menu d-lg-none">MENÜ</div>
+                        <ul class="main-menu d-none d-lg-inline-block">
+                            <li class="main-menu-item">
+                                <a class="main-menu-item-link" href="javascript:;" title="">ANASAYFA</a>
+                            </li>
+                            <li class="main-menu-item">
+                                <span class="main-menu-item-link" href="javascript:;" title="">
+                                    ERKEN ÖĞRENME
+                                    <div class="wide-menu d-none">
+                                        <span class="sub-menu-wrapper">
+                                            <a class="sub-menu-title">36 - 48 Ay</a>
+                                            <ul class="sub-menu">
+                                                <li class="sub-menu-item"><a href="javascript:;" title="">Okul Öncesi Setler</a></li>
+                                                <li class="sub-menu-item"><a href="javascript:;" title="">Okul Öncesi Setler</a></li>
+                                                <li class="sub-menu-item"><a href="javascript:;" title="">Okul Öncesi Setler</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="main-menu-item">
+                                <a class="main-menu-item-link" href="javascript:;" title="">İLKOKUL</a>
+                            </li>
+                            <li class="main-menu-item">
+                                <a class="main-menu-item-link" href="javascript:;" title="">ORTAOKUL</a>
+                            </li>
+                            <li class="main-menu-item">
+                                <a class="main-menu-item-link" href="javascript:;" title="">LİSE</a>
+                            </li>
+                            <li class="main-menu-item">
+                                <a class="main-menu-item-link" href="javascript:;" title="">KİTAPRAZZİ</a>
+                            </li>
+                            <li class="main-menu-item">
+                                <a class="main-menu-item-link" href="javascript:;" title="">İLETİŞİM</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="search">
-                    <span class="search-trigger"><i class="fa fa-search"></i><i class="fa fa-close"></i></span>
-                    <span class="search-input">
-                        <input type="search" placeholder="maç ara..." class="input-text" alt="" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="search-box">
+                <div class="search-box-title">HANGİ KİTABI ARIYORSUNUZ?</div>
+                <div class="search-box-line">
+                    <span class="search-box-line-title mb30">Sınıf Seçiniz</span>
+                    <span class="search-box-line-element">
+                        <select>
+                            <option selected>Okul Öncesi / 36-48 Ay</option>
+                            <option selected>Okul Öncesi / 36-48 Ay</option>
+                            <option selected>Okul Öncesi / 36-48 Ay</option>
+                        </select>
                     </span>
                 </div>
+                <div class="search-box-line">
+                    <span class="search-box-line-title">Ders Seçiniz</span>
+                    <span class="search-box-line-element">
+                        <select>
+                            <option selected>Fen ve Doğa Deneyleri</option>
+                            <option selected>Fen ve Doğa Deneyleri</option>
+                            <option selected>Fen ve Doğa Deneyleri</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="search-box-line">
+                    <input class="find-button" type="submit" value="KİTAPLARI BUL">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="main-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="main-slide-item type2">
+                            <img src="http://corinth.ascsa.net/image?type=preview&id=Corinth%3AImage%3Adigital%202014%2011149" alt="" />
+                            <span class="main-slide-info">
+                                <span class="main-slide-title">BİR OCAK YAYINLARININ DİKKAT VE GÖRSEL ALGI KİTABINI OKUMUŞ MUYDUNUZ?</span>
+                                <a href="javascript:;" title="" class="main-slide-button d-none d-md-block">KİTABI İNCELE</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-slide-item">
+                            <img src="https://www.theclymb.com/cImages/Website_0/type_730/EPL01233_1163722.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">333</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev d-none d-md-block"><i class="fa fa-long-arrow-left"></i></div>
+                <div class="swiper-button-next d-none d-md-block"><i class="fa fa-long-arrow-right"></i></div>
             </div>
         </div>
     </div>

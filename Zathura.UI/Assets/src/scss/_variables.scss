@@ -1,16 +1,39 @@
-﻿//--Color Palette-----------------------------
-$color-black            : #000;
-$color-gallery          : #f0f0f0;
-$color-jade             : #00b551;
-$color-silver           : #ccc;
-$color-white            : #fff;
+﻿/*set fonts*/
+$font1: 'Roboto';
+$font2: 'Montserrat';
 
-//--Standart Colors---------------------------
+/*set colors*/
+
+$color-alabaster: #f7f7f7;
+$color-black: #000;
+$color-bourbon: #b46619;
+$color-dove-gray: #666;
+$color-double-spanish-white: #e6debb;
+$color-gallery: #eaeaea;
+$color-jungle-green: #27ae60;
+$color-nevada: #626f79;
+$color-oregon: #984c02;
+$color-porcelain: #f2f3f4;
+$color-supernova: #fec500;
+$color-white: #fff;
+
+$color: $color-black;
+$color-main-bg: $color-porcelain;
+$color-border: $color-gallery;
 
 
-//--Units & Rulers----------------------------
+/*font weight*/
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
 
-$color-spor     : $color-jade;
-$web-margin    : 30px;
-$tablet-margin : 30px;
-$mobile-margin : 15px;
+
+
+$mb: 30px;
+$box-shadow: 0 1px 2px rgba($color-black,.1);
+
+
