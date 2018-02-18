@@ -262,9 +262,6 @@
     }
 }
 
-
-
-
 .search-box {
     background: $color-white;
     box-shadow: $box-shadow;
@@ -345,7 +342,6 @@
         }
     }
 }
-
 
 .main-slider {
     background: #ccc;
@@ -453,5 +449,209 @@
 
     &-prev {
         left: 0;
+    }
+}
+
+.title-row {
+    margin-bottom:20px;
+    position: relative;
+    @include media(web){
+        margin-bottom:40px;
+    }
+    &:before {
+        background: $color-mercury;
+        content: "";
+        height: 2px;
+        left:0;
+        margin-top:-1px;
+        position:absolute;
+        top:50%;
+        width: 100%;
+    }
+
+    .main-title {
+        background:$color-main-bg;
+        color:$color-nevada;
+        display:inline-block;
+        font:$fw-bold 14px/20px $font2;
+        padding-right:10px;
+        position:relative;
+        z-index:1;
+        @include media(web){
+            font-size:24px;
+            line-height:30px;
+        }
+    }
+
+    .main-link {
+        background:$color-main-bg;
+        font-size:14px;
+        font-weight:$fw-black;
+        height:20px;
+        line-height:20px;
+        margin-top:-10px;
+        padding-left:20px;
+        position:absolute;
+        right:0;
+        top:50%;
+    }
+}
+
+.product {
+    background: $color-white;
+    box-shadow: $box-shadow;
+    display: block;
+    float: left;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: all .2s linear;
+    width: 100%;
+
+    &:hover {
+        box-shadow: 0 2px 1px rgba($color-black,.25);
+    }
+
+    @include media(tablet) {
+        padding: 30px 20px;
+    }
+
+    > span {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+
+    &-image {
+        margin-bottom: 10px;
+        padding-bottom: 110%;
+        position: relative;
+
+        &-wrapper {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &-publisher {
+        color: $color-bourbon;
+        font-size: 14px;
+        font-weight: $fw-bold;
+        line-height: 18px;
+        margin: 5px 0;
+        text-decoration: underline;
+        @include line-clamp(1);
+    }
+
+    &-category {
+        color: $color-black;
+        line-height: 18px;
+        margin: 5px 0;
+        @include line-clamp(1);
+    }
+
+    &-title {
+        color: $color-black;
+        font-weight: $fw-bold;
+        line-height: 18px;
+        height: 36px;
+        margin: 5px 0;
+        @include line-clamp(2);
+    }
+
+    .star-rating {
+        font-size: 0;
+        margin-top: 10px;
+
+        &__wrap {
+            display: inline-block;
+            font-size: 1rem;
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }
+
+        &__ico {
+            float: right;
+            padding-left: 2px;
+            cursor: pointer;
+            color: #FFB300;
+
+            &:last-child {
+                padding-left: 0;
+            }
+
+            &:hover {
+                &:before, ~ .star-rating__ico:before {
+                    content: "\f005";
+                }
+            }
+        }
+
+        &__input {
+            display: none;
+
+            &:checked {
+                ~ .star-rating__ico:before {
+                    content: "\f005";
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: $color-nevada;
+    color: $color-white;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
+
+    .copyright {
+        margin-bottom: 10px;
+        @include media(tablet){
+            text-align:left;
+        }
+    }
+
+    .social {
+        @include media(tablet){
+            float:right;
+        }
+        &-item {
+            display: inline-block;
+
+            a {
+                display: block;
+                margin: 0 5px;
+
+                i {
+                    color: $color-white;
+                    font-size: 18px;
+                }
+
+                :hover {
+                    i[class*="facebook"] {
+                        color: $color-facebook;
+                    }
+
+                    i[class*="instagram"] {
+                        color: $color-instagram;
+                    }
+                }
+            }
+        }
     }
 }

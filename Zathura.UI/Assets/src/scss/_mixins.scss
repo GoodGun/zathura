@@ -16,3 +16,19 @@
         }
     }
 }
+
+@mixin line-clamp($count){
+    @if $count == 1{
+        display:block!important;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+    }@else{
+         -webkit-box-orient:vertical;
+         display:block!important;
+         display:-webkit-box!important;
+         -webkit-line-clamp:$count;
+         overflow:hidden;
+         white-space:inherit;
+     }
+}

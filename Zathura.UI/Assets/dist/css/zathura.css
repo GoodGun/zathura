@@ -2,6 +2,7 @@
 .fa-pull-left,.swiper-container-no-flexbox .swiper-slide{float:left}
 a,a:active,a:hover{text-decoration:none}
 .fa-fw,.fa-li,.swiper-pagination,.swiper-zoom-container,header{text-align:center}
+.product-category,.product-publisher{text-overflow:ellipsis;white-space:nowrap}
 @font-face{font-family:Roboto;font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fChc9.ttf) format('truetype')}
 @font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxP.ttf) format('truetype')}
 @font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc9.ttf) format('truetype')}
@@ -856,7 +857,7 @@ header .col-menu{position:static}
 }
 .mobile-menu{cursor:pointer;display:inline-block;font-size:14px;font-weight:700;padding:10px 10px 5px}
 .main-menu{background:#eaeaea;height:100%;left:100vw;padding-top:40px;position:fixed;top:0;transition:left .1s linear;width:100%;z-index:99}
-.main-menu.opened,.swiper-button-prev{left:0}
+.main-menu.opened,.swiper-button-prev,.wide-menu{left:0}
 @media (min-width:992px){.main-menu{background:#fff;float:right;left:0;padding:0;position:static}
 }
 .main-menu-item{cursor:pointer;display:inline-block;padding:4px 5px 0}
@@ -880,14 +881,14 @@ header .col-menu{position:static}
 .main-menu.opened .main-menu-item-wrapper{display:block}
 .main-menu.opened .main-menu-item:hover .main-menu-item-link{color:#000}
 .main-menu.opened .main-menu-item .wide-menu{background:#e0e0e0;border:none;border-radius:0;box-shadow:none;display:none;min-height:unset;padding:0;position:static;transtion:all .2s linear}
-.search-box,.wide-menu{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.product,.search-box,.wide-menu{box-shadow:0 1px 2px rgba(0,0,0,.1)}
 .main-menu.opened .main-menu-item .wide-menu.opened{display:block}
 .main-menu.opened .main-menu-item .wide-menu .sub-menu-wrapper{border-bottom:1px solid #ccc;display:block}
 .main-menu.opened .main-menu-item .wide-menu .sub-menu-title{display:block;font-weight:700;padding:10px 0}
 .main-menu.opened .main-menu-item .wide-menu .sub-menu{display:none;transition:all .2s linear}
 .main-menu.opened .main-menu-item .wide-menu .sub-menu.opened{display:block}
 .main-menu.opened .main-menu-item .wide-menu .sub-menu-item>a{border-top:1px solid #ccc;display:block;line-height:20px;padding:5px 0}
-.wide-menu{border-radius:5px;border-top:3px solid #e6debb;left:0;position:absolute;top:34px;width:100%;z-index:3}
+.wide-menu{background:#fff;border-radius:5px;border-top:3px solid #e6debb;position:absolute;top:34px;width:100%;z-index:3}
 @media (min-width:992px){.wide-menu{display:none;text-align:left}
 .wide-menu .sub-menu{list-style-type:disc;padding-left:20px;padding-top:10px;width:80%}
 .wide-menu .sub-menu-wrapper{float:left;padding:20px;width:33.33333%}
@@ -895,7 +896,7 @@ header .col-menu{position:static}
 .wide-menu .sub-menu-item{padding:5px 0}
 .wide-menu .sub-menu-item a{line-height:20px;padding:5px 0}
 }
-.search-box{margin-bottom:25px;padding:15px}
+.search-box{background:#fff;margin-bottom:25px;padding:15px}
 @media (min-width:768px){.search-box{margin:0}
 }
 @media (min-width:992px){.search-box{padding:25px 30px}
@@ -931,3 +932,38 @@ header .col-menu{position:static}
 .swiper-button-next,.swiper-button-prev{background:rgba(0,0,0,.6);height:44px;text-align:center;width:44px}
 .swiper-button-next i,.swiper-button-prev i{color:#eaeaea;font-size:22px;line-height:44px}
 .swiper-button-next{right:0}
+.title-row{margin-bottom:20px;position:relative}
+.title-row:before{background:#e3e3e3;content:"";height:2px;left:0;margin-top:-1px;position:absolute;top:50%;width:100%}
+.title-row .main-title{background:#f2f3f4;color:#626f79;display:inline-block;font:700 14px/20px Montserrat;padding-right:10px;position:relative;z-index:1}
+.product,.product>span{display:block;float:left;width:100%}
+@media (min-width:992px){.title-row{margin-bottom:40px}
+.title-row .main-title{font-size:24px;line-height:30px}
+}
+.title-row .main-link{background:#f2f3f4;font-size:14px;font-weight:900;height:20px;line-height:20px;margin-top:-10px;padding-left:20px;position:absolute;right:0;top:50%}
+.product{background:#fff;margin-bottom:20px;padding:15px;text-align:center;transition:all .2s linear}
+.product:hover{box-shadow:0 2px 1px rgba(0,0,0,.25)}
+@media (min-width:768px){.product{padding:30px 20px}
+}
+.product-image{margin-bottom:10px;padding-bottom:110%;position:relative}
+.product-image-wrapper{align-items:center;display:flex;height:100%;justify-content:center;position:absolute;width:100%}
+.product-image-wrapper img{max-height:100%;max-width:100%}
+.product-publisher{color:#b46619;font-size:14px;font-weight:700;line-height:18px;margin:5px 0;text-decoration:underline;display:block!important;overflow:hidden}
+.product-category,.product-title{color:#000;line-height:18px;margin:5px 0;display:block!important;overflow:hidden}
+.product-title{font-weight:700;height:36px;-webkit-box-orient:vertical;display:-webkit-box!important;-webkit-line-clamp:2;white-space:inherit}
+.product .star-rating{font-size:0;margin-top:10px}
+.product .star-rating__wrap{display:inline-block;font-size:1rem}
+.product .star-rating__wrap:after{content:"";display:table;clear:both}
+.product .star-rating__ico:hover:before,.product .star-rating__ico:hover~.star-rating__ico:before,.product .star-rating__input:checked~.star-rating__ico:before{content:"\f005"}
+.product .star-rating__ico{float:right;padding-left:2px;cursor:pointer;color:#FFB300}
+.product .star-rating__ico:last-child{padding-left:0}
+.product .star-rating__input{display:none}
+footer{background:#626f79;color:#fff;padding-bottom:25px;padding-top:25px;text-align:center}
+footer .copyright{margin-bottom:10px}
+@media (min-width:768px){footer .copyright{text-align:left}
+footer .social{float:right}
+}
+footer .social-item{display:inline-block}
+footer .social-item a{display:block;margin:0 5px}
+footer .social-item a i{color:#fff;font-size:18px}
+footer .social-item a :hover i[class*=facebook]{color:#4267b2}
+footer .social-item a :hover i[class*=instagram]{color:#636cb0}

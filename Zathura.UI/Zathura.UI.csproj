@@ -397,6 +397,7 @@
     <Content Include="Assets\dist\css\zathura.css" />
     <Content Include="Assets\dist\img\bugunun-maclari-logo-white.png" />
     <Content Include="Assets\dist\img\bugunun-maclari-logo.png" />
+    <Content Include="Assets\dist\img\kitap.jpg" />
     <Content Include="Assets\dist\img\kitaprazzi-logo.png" />
     <Content Include="Assets\dist\img\pattern.png" />
     <Content Include="Assets\dist\js\zathura.js" />
