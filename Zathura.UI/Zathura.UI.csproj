@@ -528,6 +528,7 @@
     <Content Include="Assets\bower_components\swiper\src\less\mixins.less" />
     <Content Include="Assets\bower_components\swiper\src\modules\resize\resize.less" />
     <Content Include="Assets\bower_components\swiper\src\swiper.less" />
+    <Content Include="Views\Home\Category.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

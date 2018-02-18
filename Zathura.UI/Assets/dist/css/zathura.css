@@ -967,3 +967,7 @@ footer .social-item a{display:block;margin:0 5px}
 footer .social-item a i{color:#fff;font-size:18px}
 footer .social-item a :hover i[class*=facebook]{color:#4267b2}
 footer .social-item a :hover i[class*=instagram]{color:#636cb0}
+.filter{background:#f9f7f4;box-shadow:0 1px 2px rgba(0,0,0,.1);padding:15px}
+.filter-title{border-bottom:1px solid #eaeaea;font:700 16px/28px Montserrat;padding-bottom:15px;text-align:center}
+.filter-list-item{margin-top:15px}
+.filter-list-title{color:#666;font-size:16px;font-weight:700;line-height:28px}

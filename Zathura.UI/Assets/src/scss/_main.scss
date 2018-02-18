@@ -655,3 +655,26 @@ footer {
         }
     }
 }
+
+.filter{
+    background:$color-spring-wood;
+    box-shadow:$box-shadow;
+    padding:15px;
+    &-title{
+        border-bottom:1px solid $color-gallery;
+        font:$fw-bold 16px/28px $font2;
+        padding-bottom:15px;
+        text-align:center;
+    }
+    &-list{
+        &-item{
+            margin-top:15px;
+        }
+        &-title{
+            color:$color-dove-gray;
+            font-size:16px;
+            font-weight:$fw-bold;
+            line-height:28px
+        }
+    }
+}
